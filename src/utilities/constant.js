@@ -1,0 +1,1 @@
+export const NAV_ITEMS = ['Dashboard', 'My Trucks', 'Earnings', 'Referral Network','Ads Performance','Supports','Notifications'];
