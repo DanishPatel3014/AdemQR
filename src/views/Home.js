@@ -12,6 +12,14 @@ import {
   HStack,
   IconButton,
   InputRightElement,
+  Heading,
+  SimpleGrid,
+  Table,
+  Thead,
+  Tr,
+  Th,
+  Tbody,
+  Td,
 } from '@chakra-ui/react';
 import { SearchIcon, SettingsIcon } from '@chakra-ui/icons';
 import User from '../assets/images/avatar.png';
@@ -19,6 +27,7 @@ import { IoIosNotifications } from 'react-icons/io';
 import { IoMdSettings } from 'react-icons/io';
 
 import { NAV_ITEMS } from '../utilities/constant';
+import Check from './Check';
 
 export default function Home() {
   return (
@@ -123,6 +132,7 @@ export default function Home() {
       {/* Search Bar */}
 
       <Stack width="80%">
+        {/* Search Bar */}
         <Box
           mx={2}
           my={4}
@@ -161,8 +171,268 @@ export default function Home() {
             </InputRightElement>
           </InputGroup>
         </Box>
-      </Stack>
+        {/* Search bar */}
 
+        {/* Heading */}
+        <Heading
+          fontSize={'32px'}
+          color={'#fff'}
+          pb={4}
+          fontWeight={400}
+          letterSpacing={'0px'}
+          px={3}
+        >
+          Advertiser Dashboard
+        </Heading>
+        {/* Heading */}
+        {/* Stats */}
+        <Stack px={2} pb={4}>
+          <SimpleGrid columns={[1, 2, 4]} spacing="6">
+            <Box
+              bg="#00092D"
+              p="6"
+              borderRadius="20px"
+              color="white"
+              display="flex"
+              alignItems="center"
+              boxShadow="lg"
+            >
+              {/* Vertical Bar */}
+              <Box
+                h="full"
+                w="4px"
+                bg="purple.400"
+                borderRadius="full"
+                mr="4"
+              />
+
+              {/* Content */}
+              <Box>
+                <Text fontSize="32px" fontWeight="bold">
+                  3
+                </Text>
+                <Text fontSize="16px" color="#E0E4EA" fontWeight={300}>
+                  Active Ads
+                </Text>
+              </Box>
+            </Box>
+            <Box
+              bg="#00092D"
+              p="6"
+              borderRadius="20px"
+              color="white"
+              display="flex"
+              alignItems="center"
+              boxShadow="lg"
+            >
+              {/* Vertical Bar */}
+              <Box
+                h="full"
+                w="4px"
+                bg="purple.400"
+                borderRadius="full"
+                mr="4"
+              />
+
+              {/* Content */}
+              <Box>
+                <Text fontSize="32px" fontWeight="bold">
+                  1,234
+                </Text>
+                <Text fontSize="16px" color="#E0E4EA" fontWeight={300}>
+                  Total QR Scans
+                </Text>
+              </Box>
+            </Box>
+            <Box
+              bg="#00092D"
+              p="6"
+              borderRadius="20px"
+              color="white"
+              display="flex"
+              alignItems="center"
+              boxShadow="lg"
+            >
+              {/* Vertical Bar */}
+              <Box
+                h="full"
+                w="4px"
+                bg="purple.400"
+                borderRadius="full"
+                mr="4"
+              />
+
+              {/* Content */}
+              <Box>
+                <Text fontSize="32px" fontWeight="bold">
+                  $7,500
+                </Text>
+                <Text fontSize="16px" color="#E0E4EA" fontWeight={300}>
+                  Total Ad Spend
+                </Text>
+              </Box>
+            </Box>
+            <Box
+              bg="#00092D"
+              p="6"
+              borderRadius="20px"
+              color="white"
+              display="flex"
+              alignItems="center"
+              boxShadow="lg"
+            >
+              {/* Vertical Bar */}
+              <Box
+                h="full"
+                w="4px"
+                bg="purple.400"
+                borderRadius="full"
+                mr="4"
+              />
+
+              {/* Content */}
+              <Box>
+                <Text fontSize="32px" fontWeight="bold">
+                  10,450
+                </Text>
+                <Text fontSize="16px" color="#E0E4EA" fontWeight={300}>
+                  Total Impressions
+                </Text>
+              </Box>
+            </Box>
+          </SimpleGrid>
+        </Stack>
+        {/* Stats */}
+        {/* Table */}
+        <Stack px={2} pb={4}>
+          <Box
+            bg="#00092D"
+            px="6"
+            py={4}
+            borderRadius="20px"
+            color="white"
+            display="flex"
+            alignItems="center"
+            boxShadow="lg"
+            flexDirection={'column'}
+          >
+            <Stack
+              w={'100%'}
+              direction={'row'}
+              align="center"
+              justifyContent={'space-between'}
+            >
+              <Text fontSize={'20px'} fontWeight={500}>
+                Ad Campaigns
+              </Text>
+              <Button
+                bg="transparent"
+                background="linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)"
+                borderRadius="full"
+                opacity="1"
+                fontSize={'16px'}
+                fontWeight={400}
+                // w={'119px'}
+                // h="30px"
+                // p={4}
+                // w={'max-content'}
+              >
+                view All
+              </Button>
+            </Stack>
+            <Table variant="simple" colorScheme="whiteAlpha" mt={5}>
+              <Thead
+                bg="linear-gradient(180deg, #361F6A 0%, #2A1B57 100%)"
+                borderRadius={'12px !important'}
+              >
+                <Tr textDecoration={'none'}>
+                  <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
+                    Campaign Name
+                  </Th>
+                  <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
+                    Truck ID
+                  </Th>
+                  <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
+                    Start Date
+                  </Th>
+                  <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
+                    End Date
+                  </Th>
+                  <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
+                    Trucker/Truck Company
+                  </Th>
+                  <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
+                    Total QR Scans
+                  </Th>
+                  <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
+                    Ad Spent
+                  </Th>
+                  <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
+                    Ad Status
+                  </Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                <Tr>
+                  <Td>Winter Sale</Td>
+                  <Td>TRK123</Td>
+                  <Td>01-Sep-24</Td>
+                  <Td>30-Sep-24</Td>
+                  <Td>John Doe</Td>
+                  <Td>250</Td>
+                  <Td>$1,500</Td>
+                  <Td>Active</Td>
+                </Tr>
+                <Tr>
+                  <Td>Winter Sale</Td>
+                  <Td>TRK123</Td>
+                  <Td>01-Sep-24</Td>
+                  <Td>30-Sep-24</Td>
+                  <Td>John Doe</Td>
+                  <Td>250</Td>
+                  <Td>$1,500</Td>
+                  <Td>Active</Td>
+                </Tr>
+                <Tr>
+                  <Td>Winter Sale</Td>
+                  <Td>TRK123</Td>
+                  <Td>01-Sep-24</Td>
+                  <Td>30-Sep-24</Td>
+                  <Td>John Doe</Td>
+                  <Td>250</Td>
+                  <Td>$1,500</Td>
+                  <Td>Active</Td>
+                </Tr>
+                <Tr>
+                  <Td>Winter Sale</Td>
+                  <Td>TRK123</Td>
+                  <Td>01-Sep-24</Td>
+                  <Td>30-Sep-24</Td>
+                  <Td>John Doe</Td>
+                  <Td>250</Td>
+                  <Td>$1,500</Td>
+                  <Td>Active</Td>
+                </Tr>
+                <Tr>
+                  <Td>Winter Sale</Td>
+                  <Td>TRK123</Td>
+                  <Td>01-Sep-24</Td>
+                  <Td>30-Sep-24</Td>
+                  <Td>John Doe</Td>
+                  <Td>250</Td>
+                  <Td>$1,500</Td>
+                  <Td>Active</Td>
+                </Tr>
+              </Tbody>
+            </Table>
+          </Box>
+        </Stack>
+        {/* Table */}
+
+        {/* Chart */}
+        {/* <Check /> */}
+        {/* Chart */}
+      </Stack>
       {/* Search Bar */}
     </Stack>
   );
