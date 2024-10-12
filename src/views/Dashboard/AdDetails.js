@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   FormLabel,
   GridItem,
   Image,
@@ -12,6 +13,7 @@ import CustHeading from '../../components/Dashboard/CustHeading/CustHeading';
 import FreightlinerCard from '../../components/Dashboard/Card/FreightlinerCard';
 import Dummy from '../../assets/images/dummy.png';
 import CustInput from '../../components/Dashboard/CustHeading/CustInput';
+import Scan from '../../assets/images/scan.svg';
 function AdDetails() {
   return (
     <Stack px={4} pb={4} overflowY={'auto'}>
@@ -83,9 +85,88 @@ function AdDetails() {
           </Stack>
         </GridItem>
         <GridItem colSpan={1}>
-          <Stack pt={4}>
-            <Stack px={4} py={2} h="200px" bg={'#00092D'} borderRadius={'10px'}>
+          <Stack pt={2}>
+            <Stack px={4} py={4} h="300px" bg={'#00092D'} borderRadius={'10px'}>
               <CustHeading name={'Ad Preview'} />
+              <Stack
+                w="100%"
+                h="189px"
+                bg={'#C086EC'}
+                // bg={'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)'}
+                borderRadius={'10px'}
+                px={3}
+                direction={'row'}
+                alignItems={'center'}
+              >
+                <Stack
+                  direction={'column'}
+                  justifyContent={'center'}
+                  alignItems={'center'}
+                  w="134px"
+                  h="100%"
+                  bg={'#7F48D6'}
+                >
+                  <Image src={Scan} w="110px" h="110px" />
+                  <Text fontSize={'18px'} fontFamily={'Rubik'} color={'#fff'}>
+                    Scan Me
+                  </Text>
+                </Stack>
+                <Stack
+                  lineHeight={1}
+                  px={3}
+                  direction={'column'}
+                  justifyContent={'center'}
+                >
+                  <Text fontSize={'20px'} fontFamily={'Rubik'} color={'#fff'}>
+                    Get Fashion
+                  </Text>
+                  <Text fontSize={'20px'} fontFamily={'Rubik'} color={'#fff'}>
+                    Discounts Upto
+                  </Text>
+                  <Text
+                    fontSize={'22px'}
+                    fontWeight={'bold'}
+                    fontFamily={'Rubik'}
+                    color={'#fff'}
+                  >
+                    80% Off
+                  </Text>
+                </Stack>
+              </Stack>
+            </Stack>
+            <Stack py={3}>
+              <Button
+                bg="transparent"
+                background="linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)"
+                borderRadius="10px"
+                opacity="1"
+                fontSize={'16px'}
+                fontWeight={400}
+                color={'#fff'}
+                // w={'119px'}
+                // h="30px"
+                // p={4}
+                // w={'max-content'}
+              >
+                Preview Link
+              </Button>
+            </Stack>
+            <Stack>
+              <Button
+                bg="transparent"
+                background="linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)"
+                borderRadius="10px"
+                opacity="1"
+                fontSize={'16px'}
+                fontWeight={400}
+                color={'#fff'}
+                // w={'119px'}
+                // h="30px"
+                // p={4}
+                // w={'max-content'}
+              >
+                Finish
+              </Button>
             </Stack>
           </Stack>
         </GridItem>

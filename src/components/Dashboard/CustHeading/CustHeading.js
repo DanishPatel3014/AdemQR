@@ -9,6 +9,7 @@ function CustHeading({ name }) {
       pb={4}
       fontWeight={400}
       letterSpacing={'0px'}
+      fontFamily={'Montserrat'}
       // px={3}
     >
       {name}

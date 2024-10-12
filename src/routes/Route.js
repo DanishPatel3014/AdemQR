@@ -15,6 +15,7 @@ import Support from '../views/Dashboard/Support';
 import Payment from '../views/Dashboard/Payment';
 import Reports from '../views/Dashboard/Reports';
 import AdDetails from '../views/Dashboard/AdDetails';
+import ManageAdDetail from '../views/Dashboard/ManageAdDetail';
 
 export const UserContext = createContext();
 
@@ -34,6 +35,7 @@ export default function AppRoute() {
         <Route path="payment" element={<Payment />} />
         <Route path="reports" element={<Reports />} />
         <Route path="ad-details" element={<AdDetails />} />
+        <Route path="manage-ad-detail" element={<ManageAdDetail />} />
       </Route>
     </Routes>
   );

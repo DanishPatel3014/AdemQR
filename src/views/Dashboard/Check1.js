@@ -32,21 +32,33 @@ const options = {
   circumference: 180, // Semi-circle
 };
 
-export default function Check1() {
+export default function Check1({ name }) {
   return (
-    <Box bg="#00092D" borderRadius="20px" p={4} w="100%" h={'340px'} mx={4}>
+    <Box
+      bg="#00092D"
+      borderRadius="20px"
+      p={4}
+      w="100%"
+      h={'340px'}
+      mx={name ? 0 : 4}
+    >
       <VStack spacing={3}>
         <Stack w={'100%'} px={4}>
           <Text fontSize="22px" fontWeight="medium" color="white">
-            Ads Status
+            {name ? 'Performance Metrics' : 'Ads Status'}
           </Text>
         </Stack>
 
         <Text fontSize="32px" fontWeight="medium" color="white">
           1342
         </Text>
-        <Text fontSize="18px" fontWeight={'200'} color="#F3EEFE" mb={2}>
-          Total Employment
+        <Text
+          fontSize="18px"
+          fontWeight={'200'}
+          color={name ? '#C086EC' : '#F3EEFE'}
+          mb={2}
+        >
+          Total {name ? 'Impressions' : 'Employment'}
         </Text>
 
         <Center position="relative" w="150px" h="150px">
@@ -68,13 +80,13 @@ export default function Check1() {
           <Flex alignItems="center" mr={4}>
             <Box bg="green.400" borderRadius="full" h={2} w={2} mr={2}></Box>
             <Text fontSize="xs" color="gray.300">
-              Active
+              {name ? 'impressions' : 'Active'}
             </Text>
           </Flex>
           <Flex alignItems="center">
             <Box bg="purple.400" borderRadius="full" h={2} w={2} mr={2}></Box>
             <Text fontSize="xs" color="gray.300">
-              Completed
+              {name ? 'QR Scans' : 'Completed'}
             </Text>
           </Flex>
         </Flex>
