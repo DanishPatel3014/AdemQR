@@ -1,11 +1,10 @@
 export const NAV_ITEMS = [
-  'Dashboard',
-  'My Trucks',
-  'Earnings',
-  'Referral Network',
-  'Ads Performance',
-  'Supports',
-  'Notifications',
+  { name: 'Dashboard', value: '/dashboard' },
+  { name: 'Browse Trucks', value: '/dashboard/browse-truck' },
+  { name: 'Manage Ads', value: '/dashboard/manage-ads' },
+  { name: 'Analytics & Reports', value: '/dashboard/reports' },
+  { name: 'Supports', value: '/dashboard/support' },
+  { name: 'Notifications', value: '/dashboard/notifications' },
 ];
 export const STATS = [
   {
