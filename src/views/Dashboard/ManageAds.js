@@ -17,7 +17,7 @@ function ManageAds() {
   return (
     <Stack px={4} pb={4} overflowY={'auto'}>
       <CustHeading name={'Manage Ads'} />
-      <Stack direction={'column'} gap={4}>
+      <Stack direction={'column'} gap={2}>
         <FreightlinerCard />
         <FreightlinerCard />
         <FreightlinerCard />
