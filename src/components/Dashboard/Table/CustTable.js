@@ -9,6 +9,7 @@ import {
   Th,
   Thead,
   Tr,
+  TableContainer,
 } from '@chakra-ui/react';
 import React from 'react';
 
@@ -27,6 +28,8 @@ function CustTable() {
           alignItems="center"
           boxShadow="lg"
           flexDirection={'column'}
+          w={'100%'}
+          overflowX="auto"
         >
           <Stack
             w={'100%'}

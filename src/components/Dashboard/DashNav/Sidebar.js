@@ -9,8 +9,10 @@ import {
 import React from 'react';
 import { NAV_ITEMS } from '../../../utilities/constant';
 import User from '../../../assets/images/avatar.png';
+import { useNavigate } from 'react-router-dom';
 
 function Sidebar() {
+  const navigate = useNavigate();
   return (
     <>
       {/* Side bar */}
@@ -57,11 +59,12 @@ function Sidebar() {
             }}
             w={'90%'}
           >
-            {NAV_ITEMS.map(val => (
-              <ListItem key={val} mb={'10px !important'}>
+            {NAV_ITEMS.map((val, ind) => (
+              <ListItem key={ind} mb={'10px !important'}>
                 <Stack>
                   <Button
                     px={4}
+                    onClick={() => navigate(val.value)}
                     // onClick={() => handleUrlChange(val.url)}
                     borderRadius="0px 10px 10px 0px"
                     // borderRadius={'21.5px'}
@@ -76,7 +79,7 @@ function Sidebar() {
                     fontWeight={'400'}
                   >
                     <Text color="#fff" fontSize="18px" as={'span'}>
-                      {val}
+                      {val?.name}
                     </Text>
                   </Button>
                 </Stack>
