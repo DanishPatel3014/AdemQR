@@ -35,10 +35,7 @@ h1,h2,h3,h4,h5,h6
   background-image: linear-gradient(#784fcf, #784fcf);
 }
  
-br
-{
-  display: none !important;
-}
+
 /* register */
 .Ifiled svg {
   position: absolute;
@@ -81,4 +78,9 @@ br
 }
 .Ifiled {
   position: relative;
+}
+@media (max-width: 600px){
+	br{
+    display: none;
+  }
 }
