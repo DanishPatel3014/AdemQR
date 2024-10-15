@@ -18,9 +18,7 @@ export default function MainBanner() {
   return (
     <>
       <Stack
-        bg={
-          '#171129 radial-gradient(closest-side at 50% 50%, #6432A699 0%, #6432A61F 68%, #6432A600 100%) 0% 0% no-repeat padding-box'
-        }
+       
         w={'100%'}
         h={{base:'auto', md:'1200px', xl:'1200px', "2xl": '1200px'}}
         pt={'102px'}
@@ -29,7 +27,9 @@ export default function MainBanner() {
         zIndex={1}
         justifyItems={'center'}
         alignItems={'center'}
+      
       >
+       
         <Image
         display={{"base":"none", "md":"block"}}
           src={Truck}
@@ -42,6 +42,7 @@ export default function MainBanner() {
           zIndex={-1}
            className="animate__animated  animate__zoomIn animate__delay-2s"
         />
+       
         <Container maxW={'1600px'}>
           <Stack py={{base:16,md:28}} gap={{base:28,md:40}}>
             <Heading
@@ -54,6 +55,7 @@ export default function MainBanner() {
             >
               Boost Brand
               <Box
+              verticalAlign={'middle'}
                 as="span"
                 w={{base:'60px',md:'202px'}}
                   h={{base:'25px',md:'59px'}}
@@ -67,6 +69,7 @@ export default function MainBanner() {
               Visibility
               <br />
               <Box
+              verticalAlign={'middle'}
                 as="span"
                 w={{base:'60px',md:'202px'}}
                   h={{base:'25px',md:'59px'}}

@@ -78,6 +78,7 @@ export default function Packages() {
             >
               Our
               <Box
+              verticalAlign={'middle'}
                 as="span"
                 w={{base:'90px',md:'202px'}}
                 h={{base:'25px',md:'59px'}}
@@ -96,6 +97,7 @@ export default function Packages() {
                 Payment
               </Text>{' '}
               <Box
+              verticalAlign={'middle'}
                 as="span"
                 w={{base:'90px',md:'202px'}}
                   h={{base:'25px',md:'59px'}}

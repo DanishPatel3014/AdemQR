@@ -25,10 +25,12 @@ export default function Future() {
                 bg={'#7125D6'}
                 color={'#fff'}
                 w={'max-content'}
-                fontSize={{base : '15px',md:'25px'}}
-                px={16}
+                fontSize={{base : '15px',md:'20px'}}
+                pr={16}
+                pl={8}
                 py={4}
                 borderRadius={'30px'}
+                textAlign={'left'}
               >
                 How Our Referral Program Works
               </Tag>
@@ -42,6 +44,7 @@ export default function Future() {
                 The Future of <br />
                 Trucking
                 <Box
+                verticalAlign={'middle'}
                   as="span"
                   w={{base:'90px',md:'202px'}}
                 h={{base:'25px',md:'59px'}}

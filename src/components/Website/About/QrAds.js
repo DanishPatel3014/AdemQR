@@ -66,6 +66,7 @@ export default function QrAds() {
                 Revolutionize Your Ads <br />
                 with
                 <Box
+                verticalAlign={'middle'}
                   as="span"
                   w={{base:'120px',md:'202px'}}
                   h={{base:'25px',md:'59px'}}

@@ -22,9 +22,9 @@ export default function Footer() {
   return (
     <>
       <Stack
-        bg={
-          '#171129 radial-gradient(closest-side at 50% 50%, #6432A699 0%, #6432A61F 68%, #6432A600 100%) 0% 0% no-repeat padding-box'
-        }
+        // bg={
+        //   '#171129 radial-gradient(closest-side at 50% 50%, #6432A699 0%, #6432A61F 68%, #6432A600 100%) 0% 0% no-repeat padding-box'
+        // }
       >
         <Container maxW={'1600px'} gap={20}>
           <Stack py={{base:8,md:20}} borderBottom={'1px solid #C086EC'}>
