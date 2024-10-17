@@ -20,7 +20,7 @@ export default function QrAds() {
         }
         className="animate__animated  animate__fadeInUpBig animate__delay-2s"
       >
-        <Container maxW={'1600px'} gap={20}>
+        <Container maxW={{ base: '100%', lg:'1400px',  '2xl': '1600px' }} gap={20}>
           <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={12} alignItems={'center'}>
             <Stack className="animate__animated  animate__fadeInLeft animate__delay-2s">
               <Stack
@@ -34,7 +34,7 @@ export default function QrAds() {
                 <Heading
                   textAlign={'left'}
                   color={'#fff'}
-                  fontSize={'40px'}
+                  fontSize={'64px'}
                   fontWeight={500}
                 >
                   QR Code Ads
@@ -58,7 +58,8 @@ export default function QrAds() {
                 Billboards on the Truck
               </Tag>
               <Heading
-                fontSize={{base : '30px',md:'64px'}}
+                fontSize={{base : '30px',lg:'60px','2xl':'64px'}}
+                
                 fontWeight={'500'}
                 fontFamily={'"Raleway", sans-serif'}
                 color={'#fff'}
