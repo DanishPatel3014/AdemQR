@@ -14,9 +14,9 @@ import Paramit from '../../../assets/images/page/paramit.png';
 export default function Join() {
   return (
     <>
-    <Stack py={{base:6,md:24}}  >
-        <Container maxW={'1600px'}>
-          <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={20} alignItems={'center'}>
+    <Stack py={{base:6,md:22}}  >
+        <Container maxW={{ base: '100%', lg:'1400px',  '2xl': '1600px' }}>
+          <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={20} >
             <Stack gap={{base:10,md:16}} className="animate__animated  animate__fadeInLeft animate__delay-2s">
               <Stack>
                 <Heading color={'#834cd7'} fontSize={'25px'}>

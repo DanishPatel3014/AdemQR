@@ -18,7 +18,7 @@ export default function Future() {
   return (
     <>
        <Stack py={{base:12,md:28}}>
-        <Container maxW={'1600px'}>
+        <Container maxW={{ base: '100%', lg:'1400px',  '2xl': '1600px' }}>
           <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={12} alignItems={'center'}>
             <Stack gap={4} className="animate__animated  animate__fadeInLeft animate__delay-2s">
               <Tag

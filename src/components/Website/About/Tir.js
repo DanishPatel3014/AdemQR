@@ -5,7 +5,7 @@ export default function Tir() {
   return (
     <>
       <Stack py={{base:12,md:24}} className="animate__animated  animate__fadeInUpBig animate__delay-2s">
-        <Container maxW={'1600px'} gap={20}>
+        <Container maxW={{ base: '100%', lg:'1400px',  '2xl': '1600px' }} gap={20}>
           <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} gap={6} alignItems={'center'}>
             <Stack gap={4} className="animate__animated  animate__fadeInUp animate__delay-2s">
               <Heading fontSize={'20px'} fontWeight={500} color={'#C086EC'}>

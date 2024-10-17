@@ -37,8 +37,8 @@ export default function About() {
   return (
     <>
       <Stack py={{base:6,md:24}}  className="animate__animated  animate__fadeInUpBig animate__delay-2s">
-        <Container maxW={'1600px'}>
-          <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} gap={16} alignItems={'center'}>
+        <Container maxW={{ base: '100%', lg:'1400px',  '2xl': '1600px' }}>
+          <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} gap={2} alignItems={'center'}>
             <Stack>
               <Image src={AbTruck} alt="truck about" />
             </Stack>
@@ -116,7 +116,7 @@ export default function About() {
               </Stack>
             </Stack>
             <Stack display={{base:'none',md:'block'}}>
-              <Image src={Circle} alt="truck about" />
+              <Image w={'260px'} src={Circle} alt="truck about" />
             </Stack>
           </SimpleGrid>
         </Container>
