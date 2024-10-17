@@ -69,7 +69,7 @@ export default function Packages() {
     <>
        <Stack py={{base:12,md:24}} >
         <Container maxW={'1600px'} gap={{base:6,md:20}}>
-          <Stack>
+          <Stack className="animate__animated  animate__fadeInLeft animate__delay-2s">
             <Heading
               fontSize={{base : '30px',md:'64px'}}
               fontWeight={'500'}
@@ -111,7 +111,7 @@ export default function Packages() {
               Structure
             </Heading>
           </Stack>
-          <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} gap={10} pt={{base:12,md:24}} alignItems={'center'}>
+          <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} gap={10} pt={{base:12,md:24}} alignItems={'center'} className="animate__animated  animate__fadeInUp animate__delay-2s">
             {Packagelist?.length > 0 &&
               Packagelist?.map((v, k) => {
                 return (

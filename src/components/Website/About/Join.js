@@ -17,7 +17,7 @@ export default function Join() {
     <Stack py={{base:6,md:24}}  >
         <Container maxW={'1600px'}>
           <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={20} alignItems={'center'}>
-            <Stack gap={{base:10,md:16}}>
+            <Stack gap={{base:10,md:16}} className="animate__animated  animate__fadeInLeft animate__delay-2s">
               <Stack>
                 <Heading color={'#834cd7'} fontSize={'25px'}>
                   Join the Network
@@ -50,7 +50,7 @@ export default function Join() {
                 </Text>
               </Stack>
             </Stack>
-            <Stack>
+            <Stack className="animate__animated  animate__fadeInRight animate__delay-2s">
               <Image src={Paramit} alt="Paramit" />
             </Stack>
           </SimpleGrid>

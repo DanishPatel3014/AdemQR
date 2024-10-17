@@ -22,7 +22,7 @@ export default function QrAds() {
       >
         <Container maxW={'1600px'} gap={20}>
           <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={12} alignItems={'center'}>
-            <Stack>
+            <Stack className="animate__animated  animate__fadeInLeft animate__delay-2s">
               <Stack
                 gap={4}
                 w={{base:'auto',md : '589px'}}
@@ -45,7 +45,7 @@ export default function QrAds() {
                 </Text>
               </Stack>
             </Stack>
-            <Stack gap={4}>
+            <Stack gap={4} className="animate__animated  animate__fadeInRight animate__delay-2s">
               <Tag
                 bg={'#7125D6'}
                 color={'#fff'}
