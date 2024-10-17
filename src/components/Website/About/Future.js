@@ -20,7 +20,7 @@ export default function Future() {
        <Stack py={{base:12,md:28}}>
         <Container maxW={'1600px'}>
           <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={12} alignItems={'center'}>
-            <Stack gap={4}>
+            <Stack gap={4} className="animate__animated  animate__fadeInLeft animate__delay-2s">
               <Tag
                 bg={'#7125D6'}
                 color={'#fff'}
@@ -58,7 +58,7 @@ export default function Future() {
                 Income
               </Heading>
             </Stack>
-            <Stack gap={8} pl={{base:0,md:20}}>
+            <Stack gap={8} pl={{base:0,md:20}} className="animate__animated  animate__fadeInRight animate__delay-2s">
               <Text color={'#c3c3c3'} fontSize={'16px'}>
                 Our innovative platform combines a robust 10-tier referral
                 network with a state-of-the-art QR code advertising system,
