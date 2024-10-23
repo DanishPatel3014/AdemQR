@@ -22,11 +22,11 @@ export default function Advertisers() {
     <>
       <InnerBanner title={'Advertisers'} />
       <Stack py={{base:6,md:24}}>
-        <Container maxW={'1600px'}>
+        <Container maxW={{base:'100%', md:'1200px', xl:'1200px', "2xl": '1600px'}}>
           <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={12} alignItems={'center'}>
             <Stack gap={6}>
               <Heading
-                fontSize={{base : '30px',md:'70px'}}
+                fontSize={{base:'30px', md:'60px', xl:'45px', "2xl": '70px'}}
                 fontWeight={'500'}
                 fontFamily={'"Raleway", sans-serif'}
                 color={'#fff'}
@@ -34,8 +34,9 @@ export default function Advertisers() {
                 Maximize Your Reach with Truck-Side{' '}
                 <Box
                   as="span"
+                  verticalAlign={'middle'}
                   w={{base:'120px',md:'202px'}}
-                  h={{base:'25px',md:'59px'}}
+                  h={{base:'25px',md:'50px'}}
                   display={'inline-flex'}
                   bg={
                     'transparent linear-gradient(180deg,#ECA986  0%, #D64848 100%) 0% 0% no-repeat padding-box;'
@@ -103,7 +104,7 @@ export default function Advertisers() {
       </Stack>
       <Future />
       <Stack py={{base:0,md:24}}>
-        <Container maxW={'1600px'}>
+        <Container maxW={{base:'100%', md:'1200px', xl:'1200px', "2xl": '1600px'}}>
           <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={{base:10,md:20}} alignItems={'center'}>
             <Stack gap={{base:10,md:16}}>
               <Stack>
