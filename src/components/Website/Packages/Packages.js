@@ -66,7 +66,7 @@ export default function Packages() {
   return (
     <>
       <Stack py={{ base: 12, md: 24 }}>
-        <Container maxW={{ base: '100%', lg:'1400px',  '2xl': '1600px' }} gap={{ base: 6, md: 20 }}>
+        <Container maxW={{base:'100%', md:'1200px', xl:'1200px', "2xl": '1600px'}} gap={{ base: 6, md: 20 }}>
           <Stack className="animate__animated  animate__fadeInLeft animate__delay-2s">
             <Heading
               fontSize={{ base: '30px', md: '64px' }}
@@ -111,7 +111,7 @@ export default function Packages() {
           </Stack>
           <SimpleGrid
             columns={{ base: 1, md: 3, xl: 3 }}
-            gap={10}
+            gap={4}
             pt={{ base: 12, md: 24 }}
             alignItems={'center'}
             className="animate__animated  animate__fadeInUp animate__delay-2s"
@@ -140,7 +140,7 @@ export default function Packages() {
                       justifyContent={'space-between'}
                     >
                       <Heading
-                        fontWeight={500}
+                        fontWeight={300}
                         color={'#fff'}
                         fontSize={'25px'}
                       >
@@ -152,6 +152,7 @@ export default function Packages() {
                         h={'55px'}
                         color={'#fff'}
                         fontSize={'23px'}
+                        fontWeight={400}
                         bg={
                           'transparent linear-gradient(180deg, #C086EC 0%, #7F48D6 100%) 0% 0% no-repeat padding-box;'
                         }
@@ -191,7 +192,7 @@ export default function Packages() {
                                 >
                                   <Icon fontSize={'14px'} as={IoMdCheckmark} />
                                 </Box>
-                                <Text color={'#fff'} fontSize={'15px'}>
+                                <Text color={'#c3c3c3'} fontSize={'15px'}>
                                   {item?.name}
                                 </Text>
                               </Flex>
@@ -202,7 +203,7 @@ export default function Packages() {
                     <Link to={'/register'} as={ReactLink}>
                       <Button
                         display={{ base: 'none', md: 'inline-flex' }}
-                        fontSize={'15px'}
+                        fontSize={'18px'}
                         w={'full'}
                         p={'25px 30px'}
                         fontWeight={400}

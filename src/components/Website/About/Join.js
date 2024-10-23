@@ -15,7 +15,7 @@ export default function Join() {
   return (
     <>
     <Stack py={{base:6,md:22}}  >
-        <Container maxW={{ base: '100%', lg:'1400px',  '2xl': '1600px' }}>
+        <Container maxW={{base:'100%', md:'1200px', xl:'1200px', "2xl": '1600px'}}>
           <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={20} >
             <Stack gap={{base:10,md:16}} className="animate__animated  animate__fadeInLeft animate__delay-2s">
               <Stack>
