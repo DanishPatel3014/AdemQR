@@ -37,13 +37,13 @@ export default function About() {
   return (
     <>
       <Stack py={{base:6,md:24}}  className="animate__animated  animate__fadeInUpBig animate__delay-2s">
-        <Container maxW={{ base: '100%', lg:'1400px',  '2xl': '1600px' }}>
+        <Container maxW={{base:'100%', md:'1200px', xl:'1200px', "2xl": '1600px'}}>
           <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} gap={2} alignItems={'center'}>
             <Stack>
               <Image src={AbTruck} alt="truck about" />
             </Stack>
             <Stack gap={4} pl={8}>
-              <Heading color={'#fff'} fontSize={'32px'}>
+              <Heading color={'#fff'} fontSize={{base : '25px',md:'26px','2xl':'32px'}}>
                 Introduction to{' '}
                 <Text as={'span'} color={'#834cd7'}>
                   QR Code
@@ -116,7 +116,7 @@ export default function About() {
               </Stack>
             </Stack>
             <Stack display={{base:'none',md:'block'}}>
-              <Image w={'260px'} src={Circle} alt="truck about" />
+              <Image w={'240px'} src={Circle} alt="truck about" />
             </Stack>
           </SimpleGrid>
         </Container>

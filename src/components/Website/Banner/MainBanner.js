@@ -20,7 +20,7 @@ export default function MainBanner() {
       <Stack
        
         w={'100%'}
-        h={{base:'auto', md:'1200px', xl:'1200px', "2xl": '1200px'}}
+        h={{base:'auto', md:'1110px', xl:'1110px', "2xl": '1110px'}}
         pt={'102px'}
         px={30}
         position={'relative'}
@@ -43,7 +43,7 @@ export default function MainBanner() {
            className="animate__animated  animate__zoomIn animate__delay-2s"
         />
        
-        <Container maxW={'1600px'}>
+        <Container maxW={{base:'100%', md:'1200px', xl:'1200px', "2xl": '1600px'}}   >
           <Stack py={{base:16,md:28}} gap={{base:28,md:40}}>
             <Heading
               textAlign={'center'}
@@ -99,15 +99,13 @@ export default function MainBanner() {
                 <Link to={'/register'} as={ReactLink}>
                   <Button
                     display={{ base: 'none', md: 'inline-flex' }}
-                    fontSize={'15px'}
-                    w={'154px'}
-                    p={'25px 30px'}
-                    fontWeight={400}
-                    color={'white'}
-                    border={'2px solid #FFFFFF59'}
-                    borderRadius={'30px'}
+                    fontSize={'16px'}
+                    p={'27px 45px'}
+                    fontWeight={500}
+                    color={'#000'}
+                    borderRadius={'17px'}
                     bg={
-                      'transparent linear-gradient(180deg, #C086EC 0%, #7F48D6 100%) 0% 0% no-repeat padding-box;'
+                      '#fff'
                     }
                     href={'#'}
                     _hover={{

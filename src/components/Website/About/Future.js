@@ -18,8 +18,8 @@ export default function Future() {
   return (
     <>
        <Stack py={{base:12,md:28}}>
-        <Container maxW={{ base: '100%', lg:'1400px',  '2xl': '1600px' }}>
-          <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={12} alignItems={'center'}>
+        <Container maxW={{base:'100%', md:'1200px', xl:'1200px', "2xl": '1600px'}}>
+          <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={4} alignItems={'center'}>
             <Stack gap={4} className="animate__animated  animate__fadeInLeft animate__delay-2s">
               <Tag
                 bg={'#7125D6'}
@@ -35,7 +35,7 @@ export default function Future() {
                 How Our Referral Program Works
               </Tag>
               <Heading
-                fontSize={{base:'30px', md:'40px', xl:'50px', "2xl": '64px'}}
+                fontSize={{base:'30px', md:'40px', xl:'42px', "2xl": '64px'}}
                 
                 fontWeight={'500'}
                 fontFamily={'"Raleway", sans-serif'}
@@ -68,14 +68,13 @@ export default function Future() {
                 <Button
                   display={{ base: 'none', md: 'inline-flex' }}
                   fontSize={'15px'}
-                  w={'154px'}
-                  p={'25px 30px'}
+                 
+                  p={'25px 40px'}
                   fontWeight={400}
                   color={'white'}
-                  border={'2px solid #FFFFFF59'}
-                  borderRadius={'30px'}
+                  borderRadius={'17px'}
                   bg={
-                    'transparent linear-gradient(180deg, #C086EC 0%, #7F48D6 100%) 0% 0% no-repeat padding-box;'
+                    'transparent linear-gradient(180deg, #C086EC66 0%, #7F48D64F 100%) 0% 0% no-repeat padding-box'
                   }
                   href={'#'}
                   _hover={{

@@ -26,7 +26,7 @@ export default function Footer() {
         //   '#171129 radial-gradient(closest-side at 50% 50%, #6432A699 0%, #6432A61F 68%, #6432A600 100%) 0% 0% no-repeat padding-box'
         // }
       >
-        <Container maxW={{ base: '100%', lg:'1400px',  '2xl': '1600px' }} gap={20}>
+        <Container maxW={{base:'100%', md:'1200px', xl:'1200px', "2xl": '1600px'}} gap={20}>
           <Stack py={{base:8,md:20}} borderBottom={'1px solid #C086EC'}>
             <SimpleGrid
               columns={{ base: 1, sm: 2, md: 2 }}
@@ -41,7 +41,7 @@ export default function Footer() {
               </Stack>
               <Stack alignItems={{ base: 'start', md: 'self-end' }}>
                 <Flex gap={2} alignItems={'center'}>
-                  <Box w={{base : '100%',md : '500px'}} position={'relative'}>
+                  <Box w={{base:'100%', md:'400px', xl:'400px', "2xl": '500px'}} position={'relative'}>
                     <Icon
                       position={'absolute'}
                       color={'#fff'}
@@ -57,21 +57,22 @@ export default function Footer() {
                       borderRadius={'30px'}
                       color={'#fff'}
                       pl={12}
+                      height={'60px'}
                       placeholder="Enter your email"
                       size="lg"
                     />
                   </Box>
                   <Link to={'/register'} as={ReactLink}>
                     <Button
-                      fontSize={'15px'}
+                      fontSize={'18px'}
                       w={'154px'}
-                      p={'25px 30px'}
-                      fontWeight={400}
-                      color={'white'}
-                      border={'2px solid #FFFFFF59'}
+                      p={'30px 40px'}
+                      fontWeight={500}
+                      color={'#7125D6'}
+                     
                       borderRadius={'30px'}
                       bg={
-                        'transparent linear-gradient(180deg, #C086EC 0%, #7F48D6 100%) 0% 0% no-repeat padding-box;'
+                        '#fff'
                       }
                       href={'#'}
                       _hover={{
@@ -110,7 +111,7 @@ export default function Footer() {
               </Stack>
 
               <Stack alignItems={{base : 'start',md :'self-end'}}>
-                <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} spacing={{base:'10', md:'40'}}>
+                <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} spacing={{base:'10', md:'10',xl:'10', "2xl": '40'}}>
                   <Stack>
                     <Text color={'#c3c3c3'} fontSize={'13px'} maxW={'500px'}>
                       Platform
