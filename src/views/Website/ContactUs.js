@@ -30,7 +30,7 @@ export default function ContactUs() {
     <>
       <InnerBanner title="Contact Us" />
       <Stack py={32}>
-        <Container maxW={'1600px'}>
+        <Container maxW={{base:'100%', md:'1200px', xl:'1200px', "2xl": '1600px'}}>
           <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={12} alignItems={'center'}>
             <Stack gap={8}>
               <Stack>

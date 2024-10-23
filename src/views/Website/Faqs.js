@@ -67,7 +67,7 @@ export default function Faqs() {
     <>
       <InnerBanner title="FAQs" />
       <Stack py={{base:12,md:24}}>
-        <Container maxW={'1600px'}>
+        <Container maxW={{base:'100%', md:'1200px', xl:'1200px', "2xl": '1600px'}}>
           <Stack gap={{base:12,md:24}}>
             <Heading
               textAlign={'center'}

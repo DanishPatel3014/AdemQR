@@ -42,11 +42,11 @@ export default function Trucker() {
     <>
     <InnerBanner title="Trucker" />
     <Stack py={{base:12,md:24}}>
-        <Container maxW={'1600px'}>
+        <Container maxW={{base:'100%', md:'1200px', xl:'1200px', "2xl": '1600px'}}>
           <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap={{base:10,md:12}} alignItems={'center'}>
             <Stack gap={6}>
               <Heading
-                fontSize={{base : '30px',md:'70px'}}
+              fontSize={{base:'30px', md:'60px', xl:'45px', "2xl": '70px'}}
                 fontWeight={'500'}
                 fontFamily={'"Raleway", sans-serif'}
                 color={'#fff'}
@@ -54,6 +54,7 @@ export default function Trucker() {
                 Earn Money by Ads<br/> on Your
                 <Box
                   as="span"
+                  verticalAlign={'middle'}
                   w={{base:'120px',md:'202px'}}
                   h={{base:'25px',md:'59px'}}
                   display={'inline-flex'}
@@ -124,13 +125,13 @@ export default function Trucker() {
     <Future />
     <Join/>
     <Stack py={{base:6,md:24}}  className="animate__animated  animate__fadeInUpBig animate__delay-2s">
-        <Container maxW={'1600px'}>
-          <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} gap={16} alignItems={'center'}>
+        <Container maxW={{base:'100%', md:'1200px', xl:'1200px', "2xl": '1600px'}}>
+          <SimpleGrid columns={{ base: 1, md: 3, xl: 3 }} gap={2} alignItems={'center'}>
             <Stack>
               <Image src={AbTruck} alt="truck about" />
             </Stack>
             <Stack gap={4} pl={8}>
-              <Heading color={'#fff'} fontSize={'32px'}>
+              <Heading color={'#fff'} fontSize={{base : '25px',md:'26px','2xl':'32px'}}>
                 Introduction to{' '}
                 <Text as={'span'} color={'#834cd7'}>
                   QR Code
@@ -203,7 +204,7 @@ export default function Trucker() {
               </Stack>
             </Stack>
             <Stack display={{base:'none',md:'block'}}>
-              <Image src={Circle} alt="truck about" />
+              <Image w={'240px'} src={Circle} alt="truck about" />
             </Stack>
           </SimpleGrid>
         </Container>
