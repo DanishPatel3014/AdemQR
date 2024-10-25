@@ -9,7 +9,7 @@ const data = {
   labels: ['Active', 'Completed'],
   datasets: [
     {
-      data: [67, 33], // Active: 67%, Completed: 33%
+      data: [67, 63], // Active: 67%, Completed: 33%
       backgroundColor: ['#48BB78', '#9F7AEA'], // Active: Green, Completed: Purple
       hoverBackgroundColor: ['#38A169', '#805AD5'],
       borderWidth: 0, // No border around segments

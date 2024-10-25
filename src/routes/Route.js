@@ -16,6 +16,14 @@ import Payment from '../views/Dashboard/Payment';
 import Reports from '../views/Dashboard/Reports';
 import AdDetails from '../views/Dashboard/AdDetails';
 import ManageAdDetail from '../views/Dashboard/ManageAdDetail';
+//Trucker Dashboard
+import TruckerDashboard from '../views/TruckerDashboard/Home';
+import AddTruck from '../views/TruckerDashboard/AddTruck';
+import Check from '../views/TruckerDashboard/Chart';
+import AdsPerformance from '../views/TruckerDashboard/AdsPerformance';
+import ReferFriend from '../views/TruckerDashboard/ReferFriend';
+import RefferalEarning from '../views/TruckerDashboard/RefferalEarning';
+import ChartNew from '../views/TruckerDashboard/ChartNew';
 
 export const UserContext = createContext();
 
@@ -26,6 +34,7 @@ export default function AppRoute() {
 
       {/* Dashboard Routes */}
       <Route path="/dashboard" element={<DashboardLayout />}>
+        {/* Advertiser Routes */}
         <Route index element={<Home />} />
         <Route path="manage-ads" element={<ManageAds />} />
         <Route path="browse-truck" element={<BrowseTruck />} />
@@ -36,6 +45,16 @@ export default function AppRoute() {
         <Route path="reports" element={<Reports />} />
         <Route path="ad-details" element={<AdDetails />} />
         <Route path="manage-ad-detail" element={<ManageAdDetail />} />
+        {/* Advertiser Routes */}
+        {/* Trucker Dashboard */}
+        <Route path="check" element={<Check />} />
+        <Route path="trucker-dashboard" element={<TruckerDashboard />} />
+        <Route path="add-truck" element={<AddTruck />} />
+        <Route path="ads-performance" element={<AdsPerformance />} />
+        <Route path="refer-friend" element={<ReferFriend />} />
+        <Route path="referral-earning" element={<RefferalEarning />} />
+        <Route path="checking" element={<ChartNew />} />
+        {/* Trucker Dashboard */}
       </Route>
     </Routes>
   );

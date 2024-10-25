@@ -96,10 +96,16 @@ const options = {
     },
   },
 };
-export default function Check() {
+export default function Check({ name }) {
   return (
     <Box w="100%" display={'flex'}>
-      <Stack w="70%" bg="#00092D" p={6} borderRadius="20px" h="340px">
+      <Stack
+        w={name ? '100%' : '70%'}
+        bg="#00092D"
+        p={6}
+        borderRadius="20px"
+        h="340px"
+      >
         {' '}
         <Text pb={2} fontSize={'20px'} color={'#fff'} fontWeight={500}>
           QR Scans
@@ -117,9 +123,11 @@ export default function Check() {
           />
         </Box>
       </Stack>
-      <Stack w="30%">
-        <Check1 />
-      </Stack>
+      {!name && (
+        <Stack w={name ? '50%' : '30%'}>
+          <Check1 />
+        </Stack>
+      )}
     </Box>
   );
 }
