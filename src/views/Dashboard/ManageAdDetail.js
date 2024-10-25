@@ -14,10 +14,10 @@ import CustHeading from '../../components/Dashboard/CustHeading/CustHeading';
 import Truck from '../../assets/images/truck.png';
 import Check1 from './Check1';
 
-function ManageAdDetail() {
+function ManageAdDetail({ name }) {
   return (
-    <Stack px={4} pb={4} overflowY={'auto'}>
-      <CustHeading name={'Manage Ad Details'} />
+    <Stack px={!name && 4} pb={!name && 4} overflowY={'auto'}>
+      {!name && <CustHeading name={'Manage Ad Details'} />}
       <Stack
         direction={'row'}
         w="100%"

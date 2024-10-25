@@ -31,7 +31,7 @@ h1,h2,h3,h4,h5,h6
 }
 ::-webkit-scrollbar-thumb:vertical {
   border-radius: 0px;
-  height: 20px;
+  height: 5px;
   background-image: linear-gradient(#784fcf, #784fcf);
 }
  

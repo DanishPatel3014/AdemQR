@@ -7,7 +7,8 @@ function BrowseTruck() {
   return (
     <Stack px={4} pb={4} overflowY={'auto'}>
       <CustHeading name={'Browse Trucks'} />
-      <SimpleGrid columns={[1, 2, 3]} spacing="6">
+      <SimpleGrid columns={[1, 2, 3, 4]} spacing="6">
+        <TruckCard />
         <TruckCard />
         <TruckCard />
         <TruckCard />

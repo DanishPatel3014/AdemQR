@@ -7,8 +7,70 @@ import Check1 from './Check1';
 import Check from './Check';
 
 export default function Home() {
+  const dataHeaders = [
+    'Campaign Name',
+    'Truck ID',
+    'Start Date',
+    'End Date',
+    'Trucker/Truck Company',
+    'Total QR Scans',
+    'Ad Spent',
+    'Ad Status',
+  ];
+  const dataColumns = [
+    {
+      name: 'Winter Sale',
+      id: 'TRK123',
+      startDate: '01-Sep-24',
+      endDate: '30-Sep-24',
+      trucker: 'John Doe',
+      totalQRScans: '250',
+      adSpent: '$1,500',
+      adStatus: 'Active',
+    },
+    {
+      name: 'Winter Sale',
+      id: 'TRK123',
+      startDate: '01-Sep-24',
+      endDate: '30-Sep-24',
+      trucker: 'John Doe',
+      totalQRScans: '250',
+      adSpent: '$1,500',
+      adStatus: 'Active',
+    },
+    {
+      name: 'Winter Sale',
+      id: 'TRK123',
+      startDate: '01-Sep-24',
+      endDate: '30-Sep-24',
+      trucker: 'John Doe',
+      totalQRScans: '250',
+      adSpent: '$1,500',
+      adStatus: 'Active',
+    },
+    {
+      name: 'Winter Sale',
+      id: 'TRK123',
+      startDate: '01-Sep-24',
+      endDate: '30-Sep-24',
+      trucker: 'John Doe',
+      totalQRScans: '250',
+      adSpent: '$1,500',
+      adStatus: 'Active',
+    },
+    {
+      name: 'Winter Sale',
+      id: 'TRK123',
+      startDate: '01-Sep-24',
+      endDate: '30-Sep-24',
+      trucker: 'John Doe',
+      totalQRScans: '250',
+      adSpent: '$1,500',
+      adStatus: 'Active',
+    },
+  ];
   return (
-    <Stack px={4} pb={4} overflowY={'auto'}>
+    <Stack px={4} pb={4} overflowY={'auto'} overflowX={'hidden'}>
       <CustHeading name={'Advertiser Dashboard'} />
       <Stack pb={4}>
         <SimpleGrid columns={[1, 2, 4]} spacing="6">
@@ -17,7 +79,7 @@ export default function Home() {
           ))}
         </SimpleGrid>
       </Stack>
-      <CustTable />
+      <CustTable header={dataHeaders} data={dataColumns} />
       <Check />
     </Stack>
   );

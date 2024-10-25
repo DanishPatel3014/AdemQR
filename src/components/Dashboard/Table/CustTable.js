@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-function CustTable() {
+function CustTable({ header, data }) {
   return (
     <>
       {/* Table */}
@@ -47,10 +47,6 @@ function CustTable() {
               opacity="1"
               fontSize={'16px'}
               fontWeight={400}
-              // w={'119px'}
-              // h="30px"
-              // p={4}
-              // w={'max-content'}
             >
               view All
             </Button>
@@ -61,83 +57,28 @@ function CustTable() {
               borderRadius={'12px !important'}
             >
               <Tr textDecoration={'none'}>
-                <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
-                  Campaign Name
-                </Th>
-                <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
-                  Truck ID
-                </Th>
-                <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
-                  Start Date
-                </Th>
-                <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
-                  End Date
-                </Th>
-                <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
-                  Trucker/Truck Company
-                </Th>
-                <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
-                  Total QR Scans
-                </Th>
-                <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
-                  Ad Spent
-                </Th>
-                <Th fontSize={'14px'} fontWeight={500} color={'#fff'}>
-                  Ad Status
-                </Th>
+                {header?.map((item, index) => (
+                  <Th
+                    fontSize={'14px'}
+                    fontWeight={500}
+                    color={'#fff'}
+                    key={index}
+                  >
+                    {item}
+                  </Th>
+                ))}
               </Tr>
             </Thead>
             <Tbody>
-              <Tr>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>Winter Sale</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>TRK123</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>01-Sep-24</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>30-Sep-24</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>John Doe</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>250</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>$1,500</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>Active</Td>
-              </Tr>
-              <Tr>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>Winter Sale</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>TRK123</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>01-Sep-24</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>30-Sep-24</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>John Doe</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>250</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>$1,500</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>Active</Td>
-              </Tr>
-              <Tr>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>Winter Sale</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>TRK123</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>01-Sep-24</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>30-Sep-24</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>John Doe</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>250</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>$1,500</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>Active</Td>
-              </Tr>
-              <Tr>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>Winter Sale</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>TRK123</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>01-Sep-24</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>30-Sep-24</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>John Doe</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>250</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>$1,500</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>Active</Td>
-              </Tr>
-              <Tr>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>Winter Sale</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>TRK123</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>01-Sep-24</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>30-Sep-24</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>John Doe</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>250</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>$1,500</Td>
-                <Td fontSize={{ xl: '15px', '2xl': '16px' }}>Active</Td>
-              </Tr>
+              {data?.map((item, index) => (
+                <Tr key={index}>
+                  {Object.keys(item).map((key, index) => (
+                    <Td fontSize={{ xl: '15px', '2xl': '16px' }} key={index}>
+                      {item[key]}
+                    </Td>
+                  ))}
+                </Tr>
+              ))}
             </Tbody>
           </Table>
         </Box>
