@@ -14,6 +14,7 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  Image,
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -21,26 +22,28 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons';
+import logo from '../../assets/images/logo.png';
+import { Link as ReactLink } from 'react-router-dom';
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Box>
-      <Flex
-        bg={useColorModeValue('white', 'gray.800')}
+      <Stack
+        zIndex={'2'}
+        direction={'row'}
+        bg={'transparent !important'}
+        position={'absolute'}
+        w={'100%'}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}>
-        <Flex
-          flex={{ base: 1, md: 'auto' }}
-          ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}>
+        py={{ base: 4, md: 6 }}
+        px={{ base: 4, md: 30 }}
+        align={'center'}
+        justifyContent={'space-between'}
+      >
+        <Flex ml={{ base: -2 }} display={{ base: 'flex', md: 'none' }}>
           <IconButton
             onClick={onToggle}
             icon={
@@ -50,15 +53,23 @@ export default function WithSubnavigation() {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-            fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            Logo
-          </Text>
-
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+        <Box
+          as={ReactLink}
+          to={'/'}
+          rel="home"
+          width={{ base: '36%', lg: '11%' }}
+        >
+          <Image alt={'Logo'} src={logo} draggable={false}  />
+        </Box>
+        <Flex
+          justify={{ base: 'center', md: 'center' }}
+          display={{ base: 'none', lg: 'flex' }}
+        >
+          <Flex
+            justify={'center'}
+            display={{ base: 'none', lg: 'flex' }}
+            ml={10}
+          >
             <DesktopNav />
           </Flex>
         </Flex>
@@ -67,30 +78,56 @@ export default function WithSubnavigation() {
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
           direction={'row'}
-          spacing={6}>
-          <Button
-            as={'a'}
-            fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            href={'#'}>
-            Sign In
-          </Button>
-          <Button
-            as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'pink.400'}
-            href={'#'}
-            _hover={{
-              bg: 'pink.300',
-            }}>
-            Sign Up
-          </Button>
+          spacing={6}
+          alignItems={'center'}
+        >
+          <Link
+            to={'/login'}
+            as={ReactLink}
+          >
+               <Button
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontSize={'15px'}
+              w={'154px'}
+              p={'25px 30px'}
+              border={'2px solid #FFFFFF59'}
+              borderRadius={'30px'}
+              fontWeight={400}
+              color={'white'}
+              bg={'transparent'}
+              href={'#'}
+              _hover={{
+                bg: '#3E5079',
+                color: '#fff',
+              }}
+            >
+              Get Started
+            </Button>
+          </Link>
+          <Link to={'/login'} as={ReactLink}>
+            <Button
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontSize={'15px'}
+              w={'154px'}
+              p={'25px 30px'}
+              fontWeight={400}
+              color={'white'}
+              border={'2px solid #FFFFFF59'}
+              borderRadius={'30px'}
+              bg={'transparent linear-gradient(180deg, #C086EC 0%, #7F48D6 100%) 0% 0% no-repeat padding-box;'}
+              href={'#'}
+              _hover={{
+                bg: '#3E5079',
+                color: '#fff',
+              }}
+            >
+              Login
+            </Button>
+          </Link>
+
+    
         </Stack>
-      </Flex>
+      </Stack>
 
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
@@ -100,26 +137,25 @@ export default function WithSubnavigation() {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('gray.600', 'gray.200');
-  const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
   return (
     <Stack direction={'row'} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS.map(navItem => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
               <Link
                 p={2}
                 href={navItem.href ?? '#'}
-                fontSize={'sm'}
+                fontSize={'16px'}
                 fontWeight={500}
-                color={linkColor}
+                color={'#fff'}
                 _hover={{
                   textDecoration: 'none',
-                  color: linkHoverColor,
-                }}>
+                  color: '#3E5079',
+                }}
+              >
                 {navItem.label}
               </Link>
             </PopoverTrigger>
@@ -131,9 +167,10 @@ const DesktopNav = () => {
                 bg={popoverContentBgColor}
                 p={4}
                 rounded={'xl'}
-                minW={'sm'}>
+                minW={'sm'}
+              >
                 <Stack>
-                  {navItem.children.map((child) => (
+                  {navItem.children.map(child => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
                 </Stack>
@@ -154,13 +191,15 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
+    >
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
             transition={'all .3s ease'}
             _groupHover={{ color: 'pink.400' }}
-            fontWeight={500}>
+            fontWeight={500}
+          >
             {label}
           </Text>
           <Text fontSize={'sm'}>{subLabel}</Text>
@@ -172,7 +211,8 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
           _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
           justify={'flex-end'}
           align={'center'}
-          flex={1}>
+          flex={1}
+        >
           <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
@@ -185,8 +225,9 @@ const MobileNav = () => {
     <Stack
       bg={useColorModeValue('white', 'gray.800')}
       p={4}
-      display={{ md: 'none' }}>
-      {NAV_ITEMS.map((navItem) => (
+      display={{ md: 'none' }}
+    >
+      {NAV_ITEMS.map(navItem => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>
@@ -206,10 +247,12 @@ const MobileNavItem = ({ label, children, href }) => {
         align={'center'}
         _hover={{
           textDecoration: 'none',
-        }}>
+        }}
+      >
         <Text
           fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}>
+          color={useColorModeValue('gray.600', 'gray.200')}
+        >
           {label}
         </Text>
         {children && (
@@ -230,9 +273,10 @@ const MobileNavItem = ({ label, children, href }) => {
           borderLeft={1}
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.700')}
-          align={'start'}>
+          align={'start'}
+        >
           {children &&
-            children.map((child) => (
+            children.map(child => (
               <Link key={child.label} py={2} href={child.href}>
                 {child.label}
               </Link>
@@ -244,42 +288,27 @@ const MobileNavItem = ({ label, children, href }) => {
 };
 
 const NAV_ITEMS = [
+ 
   {
-    label: 'Inspiration',
-    children: [
-      {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
-      },
-    ],
+    label: 'Home',
+    href: '/',
   },
   {
-    label: 'Find Work',
-    children: [
-      {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-    ],
+    label: 'Advertisers',
+    href: '/advertisers',
   },
   {
-    label: 'Learn Design',
-    href: '#',
+    label: 'Trucker',
+    href: '/trucker',
+  },
+ 
+  {
+    label: 'Faqs',
+    href: '/faqs',
   },
   {
-    label: 'Hire Designers',
-    href: '#',
+    label: 'Contact Us',
+    href: '/contact',
   },
+
 ];
