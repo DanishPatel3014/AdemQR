@@ -1,21 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
- 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
- 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   
 }
 body {
   font-family: 'Montserrat', sans-serif !important;
-  background-color: #171129  !important;
+  background-color: #171129 !important;
 }
-h1,h2,h3,h4,h5,h6
-{
-  font-family: "Raleway", sans-serif !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif !important;
   font-weight: 500 !important;
 }
 ::-webkit-scrollbar {
@@ -27,14 +30,13 @@ h1,h2,h3,h4,h5,h6
   display: none;
 }
 ::-webkit-scrollbar-track-piece {
-  background-color: #784fcf;
+  background-color: #361f6a;
 }
 ::-webkit-scrollbar-thumb:vertical {
   border-radius: 0px;
   height: 5px;
   background-image: linear-gradient(#784fcf, #784fcf);
 }
- 
 
 /* register */
 .Ifiled svg {
@@ -52,11 +54,9 @@ h1,h2,h3,h4,h5,h6
   padding: 26px 52px;
   border: 1px solid #834cd7;
   color: #fff;
-  
 }
 .Ifiled label {
   color: #fff;
-  
 }
 .Ifiled input:focus,
 .Ifiled select:focus,
@@ -154,40 +154,40 @@ h1,h2,h3,h4,h5,h6
 .buttons a:nth-child(1) {
   color: #121212;
   background-color: #ffffff;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .buttons a:nth-child(1):hover {
-background: #b7b7b7;
-color: #000;
+  background: #b7b7b7;
+  color: #000;
 }
 
 .buttons a:nth-child(2) {
   border: 1px solid #fff;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .buttons a:nth-child(2):hover {
-background: #fff;
-color: #000;
+  background: #fff;
+  color: #000;
 }
 
 @media only screen and (max-width: 700px) {
   .content-parent {
-      width: 90%;
+    width: 90%;
   }
 
   .content h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .buttons a {
-      padding: 6px 1rem;
+    padding: 6px 1rem;
   }
 }
 
-@media (max-width: 600px){
-	br{
+@media (max-width: 600px) {
+  br {
     display: none;
   }
 }

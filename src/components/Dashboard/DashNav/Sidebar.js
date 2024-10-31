@@ -9,10 +9,12 @@ import {
 import React from 'react';
 import { NAV_ITEMS } from '../../../utilities/constant';
 import User from '../../../assets/images/avatar.png';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function Sidebar() {
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
   return (
     <>
       {/* Side bar */}
@@ -69,10 +71,11 @@ function Sidebar() {
                     borderRadius="0px 10px 10px 0px"
                     // borderRadius={'21.5px'}
                     bgGradient={
-                      val === 'Dashboard'
-                        ? 'linear(to-b, var(--unnamed-color-c086ec) 0%, #7F48D6 100%)'
+                      val.value === location.pathname
+                        ? 'linear(180deg, #C086EC 0%, #7F48D6 100%)'
                         : 'transparent'
                     }
+                    _hover={{ bg: 'linear(180deg, #C086EC 0%, #7F48D6 100%)' }}
                     bg={'none'}
                     justifyContent={'flex-start'}
                     color={'#000'}
@@ -91,11 +94,11 @@ function Sidebar() {
           <Button
             borderRadius="10px"
             m="10px 20px"
-            bgGradient={
-              'linear(to-b, var(--unnamed-color-c086ec) 0%, #7F48D6 100%)'
-            }
+            bgGradient="linear(180deg, #C086EC 0%, #7F48D6 100%)"
             color={'#fff'}
             fontWeight={'400'}
+            _hover={{ bgGradient: 'linear(180deg, #7F48D6 0%, #C086EC 100%)' }}
+            _active={{ bgGradient: 'linear(180deg, #7F48D6 0%, #C086EC 100%)' }}
           >
             <Text color="#fff" fontSize="18px" as={'span'}>
               logout

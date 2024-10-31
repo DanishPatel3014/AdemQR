@@ -1,19 +1,19 @@
-// export const NAV_ITEMS = [
-//   { name: 'Dashboard', value: '/dashboard' },
-//   { name: 'Browse Trucks', value: '/dashboard/browse-truck' },
-//   { name: 'Manage Ads', value: '/dashboard/manage-ads' },
-//   { name: 'Analytics & Reports', value: '/dashboard/reports' },
-//   { name: 'Supports', value: '/dashboard/support' },
-//   { name: 'Notifications', value: '/dashboard/notifications' },
-// ];
 export const NAV_ITEMS = [
-  // { name: 'Dashboard', value: '/dashboard' },
-  // { name: 'Browse Trucks', value: '/dashboard/browse-truck' },
-  // { name: 'Manage Ads', value: '/dashboard/manage-ads' },
-  { name: 'Ads Performance', value: '/dashboard/ads-performance' },
+  { name: 'Dashboard', value: '/dashboard' },
+  { name: 'Browse Trucks', value: '/dashboard/browse-truck' },
+  { name: 'Manage Ads', value: '/dashboard/manage-ads' },
+  { name: 'Analytics & Reports', value: '/dashboard/reports' },
   { name: 'Supports', value: '/dashboard/support' },
   { name: 'Notifications', value: '/dashboard/notifications' },
 ];
+// export const NAV_ITEMS = [
+//   // { name: 'Dashboard', value: '/dashboard' },
+//   // { name: 'Browse Trucks', value: '/dashboard/browse-truck' },
+//   // { name: 'Manage Ads', value: '/dashboard/manage-ads' },
+//   { name: 'Ads Performance', value: '/dashboard/ads-performance' },
+//   { name: 'Supports', value: '/dashboard/support' },
+//   { name: 'Notifications', value: '/dashboard/notifications' },
+// ];
 export const STATS = [
   {
     name: 'Active Ads',

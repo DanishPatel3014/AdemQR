@@ -80,6 +80,7 @@ const ReferralEarnings = () => {
                   data={data}
                   cx="50%"
                   cy="50%"
+                  borderWidth={0}
                   startAngle={180}
                   endAngle={0}
                   innerRadius="36%"
