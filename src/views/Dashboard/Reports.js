@@ -7,6 +7,58 @@ import Check1 from './Check1';
 import Check from './Check';
 
 export default function Reports() {
+  const dataHeaders = [
+    'Campaign Name',
+    'Truck ID',
+    'Start Date',
+    'End Date',
+    'Trucker/Truck Company',
+    'Total QR Scans',
+    'Ad Spent',
+    'Ad Status',
+  ];
+  const dataColumns = [
+    {
+      name: 'Winter Sale',
+      id: 'TRK123',
+      startDate: '01-Sep-24',
+      endDate: '30-Sep-24',
+      trucker: 'John Doe',
+      totalQRScans: '250',
+      adSpent: '$1,500',
+      adStatus: 'Active',
+    },
+    {
+      name: 'Winter Sale',
+      id: 'TRK123',
+      startDate: '01-Sep-24',
+      endDate: '30-Sep-24',
+      trucker: 'John Doe',
+      totalQRScans: '250',
+      adSpent: '$1,500',
+      adStatus: 'Active',
+    },
+    {
+      name: 'Winter Sale',
+      id: 'TRK123',
+      startDate: '01-Sep-24',
+      endDate: '30-Sep-24',
+      trucker: 'John Doe',
+      totalQRScans: '250',
+      adSpent: '$1,500',
+      adStatus: 'Active',
+    },
+    {
+      name: 'Winter Sale',
+      id: 'TRK123',
+      startDate: '01-Sep-24',
+      endDate: '30-Sep-24',
+      trucker: 'John Doe',
+      totalQRScans: '250',
+      adSpent: '$1,500',
+      adStatus: 'Active',
+    },
+  ];
   return (
     <Stack px={4} pb={4} overflowY={'auto'}>
       <CustHeading name={'Analytics & Reports'} />
@@ -19,7 +71,7 @@ export default function Reports() {
       </Stack>
       <Check />
       <Stack pt={4}>
-        <CustTable />
+        <CustTable header={dataHeaders} data={dataColumns} />
       </Stack>
     </Stack>
   );

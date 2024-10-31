@@ -21,6 +21,7 @@ function Packages() {
       background="linear-gradient(180deg, #2F1862 0%, #171129 100%)"
       boxShadow="0px 10px 20px #02027829"
       borderRadius="16px"
+      w="90%"
       opacity="1"
       h={{ xl: '535px', '2xl': '545px' }}
       mixBlendMode="normal"

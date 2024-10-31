@@ -19,10 +19,14 @@ import Packages from '../../components/Dashboard/Package/Packages';
 function Package() {
   return (
     <Stack pb={4} overflowY={'auto'} fontFamily={'Rubik'}>
-      <Stack px={4}>
+      <Stack px={7} pb={10}>
         <CustHeading name={'Select Package'} />
       </Stack>
-      <SimpleGrid columns={{ base: 1, xl: 2, '2xl': 3 }} spacing={4}>
+      <SimpleGrid
+        columns={{ base: 1, xl: 2, '2xl': 3 }}
+        spacing={4}
+        placeItems={'start'}
+      >
         <Packages />
         <Packages />
         <Packages />

@@ -15,8 +15,9 @@ function FreightlinerCard() {
               direction={'row'}
               alignItems={'center'}
               h={'30px'}
-              w={'70%'}
+              w={{ xl: '65%', '2xl': '56%' }}
               px={4}
+              gap={6}
               justifyContent={'space-between'}
             >
               <Text fontSize={'18px'} fontWeight={'500'} color={'#fff'}>
@@ -29,7 +30,11 @@ function FreightlinerCard() {
                 Premium Package
               </Text>
             </Stack>
-            <Stack w="30%" direction={'row'} justifyContent={'flex-end'}>
+            <Stack
+              w={{ lg: '35%', '2xl': '41%' }}
+              direction={'row'}
+              justifyContent={'flex-end'}
+            >
               <HStack>
                 <Box bg="purple.300" borderRadius="full" h={2} w={2}></Box>
                 <Text color="white" fontSize="sm">
@@ -107,7 +112,7 @@ function FreightlinerCard() {
             </Stack>
             <Stack w="30%" direction={'row'} m={'0 !important'}>
               <Stack
-                w="70%"
+                w={{ base: '70%', lg: '70%', xl: '70%', '2xl': '43%' }}
                 p={'15px'}
                 bg={'#000D41'}
                 h="77px"
@@ -127,7 +132,7 @@ function FreightlinerCard() {
               </Stack>
             </Stack>
           </Stack>
-          <Stack marginTop={'-14px !important'}>
+          <Stack marginTop={'-16px !important'}>
             <Text textAlign={'right'} fontSize={'14px'} color={'#fff'}>
               <span style={{ color: '#7E798B' }}>Date:</span> 01-30 Aug
             </Text>
