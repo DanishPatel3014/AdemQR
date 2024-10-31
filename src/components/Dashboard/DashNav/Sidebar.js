@@ -5,10 +5,12 @@ import {
   Stack,
   Text,
   UnorderedList,
+  Image
 } from '@chakra-ui/react';
 import React from 'react';
 import { NAV_ITEMS } from '../../../utilities/constant';
 import User from '../../../assets/images/avatar.png';
+import logo from '../../../assets/images/logo.png';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 function Sidebar() {
@@ -28,12 +30,13 @@ function Sidebar() {
       >
         <Stack mx={6} direction="row" align="center" my={6}>
           <Stack>
-            <Text fontSize="32px" fontWeight="200" color="#fff">
+          <Image alt={'Logo'} src={logo} draggable={false}  />
+            {/* <Text fontSize="32px" fontWeight="200" color="#fff">
               Your
               <Text as="span" color="rgba(131, 76, 215, 1)">
                 Logo
               </Text>
-            </Text>
+            </Text> */}
           </Stack>
         </Stack>
         <Stack direction="row" align="center" m={'10px 24px !important'}>
