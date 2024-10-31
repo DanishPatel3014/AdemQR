@@ -24,13 +24,27 @@ import AdsPerformance from '../views/TruckerDashboard/AdsPerformance';
 import ReferFriend from '../views/TruckerDashboard/ReferFriend';
 import RefferalEarning from '../views/TruckerDashboard/RefferalEarning';
 import ChartNew from '../views/TruckerDashboard/ChartNew';
+import WebHome from '../views/Website/WebHome';
+import Weblayout from '../layout/Weblayout';
+import Advertisers from '../views/Website/Advertisers';
+import Trucker from '../views/Website/Trucker';
+import Faqs from '../views/Website/Faqs';
+import ContactUs from '../views/Website/ContactUs';
+import Login from '../views/Website/Login';
 
 export const UserContext = createContext();
 
 export default function AppRoute() {
   return (
     <Routes>
-      {/* <Route exact path="/" element={<Home />} /> */}
+      <Route  path="/" element={<Weblayout />}>
+      <Route index element={<WebHome />} />
+      <Route path="/advertisers" element={<Advertisers />} />
+      <Route path="/trucker" element={<Trucker />} />
+      <Route path="/faqs" element={<Faqs />} />
+      <Route path="/contact" element={<ContactUs />} />
+      <Route path="/login" element={<Login />} />
+      </Route>
 
       {/* Dashboard Routes */}
       <Route path="/dashboard" element={<DashboardLayout />}>
