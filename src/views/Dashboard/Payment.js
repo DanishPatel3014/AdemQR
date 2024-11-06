@@ -102,6 +102,7 @@ function Payment() {
           border={'2px solid #FFFFFF59 '}
           fontWeight={400}
           borderRadius={'7px'}
+          _hover={{ bg: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)' }}
         >
           Pay Now
         </Button>

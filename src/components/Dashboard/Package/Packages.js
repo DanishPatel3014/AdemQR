@@ -217,6 +217,7 @@ function Packages() {
             color={'#fff'}
             fontSize={'20px'}
             fontWeight={400}
+            _hover={{ bg: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)' }}
           >
             Proceed
           </Button>

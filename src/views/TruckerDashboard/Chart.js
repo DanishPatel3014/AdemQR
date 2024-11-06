@@ -40,7 +40,7 @@ function TruckAdsRevenue() {
       boxShadow="lg"
       color="white"
       textAlign="center"
-      width="300px"
+      width="100%"
     >
       <Text
         fontWeight="500"

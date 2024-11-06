@@ -38,14 +38,18 @@ function Home() {
         </SimpleGrid>
       </Stack>
       <Stack w={'100%'} direction={'row'} gap={4}>
-        <Check name="trucker" />
-        <ChartNew />
+        <Stack w="50%">
+          <Check name="trucker" />
+        </Stack>
+        <Stack w="50%" position={'relative'}>
+          <ChartNew />
+        </Stack>
       </Stack>
       <Stack w="100%" py={4} direction={'row'}>
-        <Stack w="80%">
+        <Stack w={{ lg: '75%', '2xl': '80%' }}>
           <CustTable header={dataHeaders} data={dataColumns} />
         </Stack>
-        <Stack w="20%">
+        <Stack w={{ lg: '25%', '2xl': '20%' }}>
           <Chart />
         </Stack>
       </Stack>

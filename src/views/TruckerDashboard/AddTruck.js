@@ -45,8 +45,6 @@ function AddTruck() {
           <Image w="145px" h="145px" src={TruckUpload} alt="truck_upload" />
           <Image w="145px" h="145px" src={TruckUpload} alt="truck_upload" />
           <Image w="145px" h="145px" src={TruckUpload} alt="truck_upload" />
-          <Image w="145px" h="145px" src={TruckUpload} alt="truck_upload" />
-          <Image w="145px" h="145px" src={TruckUpload} alt="truck_upload" />
         </Stack>
         {/* <Stack w="30%" h="145px" borderRadius={'10px'}>
           <Image borderRadius={'10px'} src={Dummy} w={'100%'} h={'100%'} />
