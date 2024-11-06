@@ -89,6 +89,7 @@ function Support() {
               color={'#fff'}
               p="3px"
               opacity="1"
+              _hover={{  bg:"linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)"}}
             >
               Send
             </Button>

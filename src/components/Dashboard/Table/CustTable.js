@@ -47,6 +47,9 @@ function CustTable({ header, data }) {
               opacity="1"
               fontSize={'16px'}
               fontWeight={400}
+              _hover={{
+                background: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)',
+              }}
             >
               view All
             </Button>

@@ -55,6 +55,9 @@ function ManageAdDetail({ name }) {
               w="78px"
               fontWeight={400}
               color={'#fff'}
+              _hover={{
+                background:'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)',
+              }}
               // w={'119px'}
               // h="30px"
               // p={4}

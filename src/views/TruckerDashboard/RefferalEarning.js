@@ -112,7 +112,9 @@ function RefferalEarning() {
           color={'#fff'}
           fontSize={'16px'}
           fontWeight={400}
-          _hover={{ bg: 'transparent' }}
+          _hover={{
+            background: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)',
+          }}
         >
           Add Truck
         </Button>

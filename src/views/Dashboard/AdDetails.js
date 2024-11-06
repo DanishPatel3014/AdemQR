@@ -147,6 +147,10 @@ function AdDetails() {
                 // h="30px"
                 // p={4}
                 // w={'max-content'}
+                _hover={{
+                  background:
+                    'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)',
+                }}
               >
                 Preview Link
               </Button>
@@ -160,6 +164,10 @@ function AdDetails() {
                 fontSize={'16px'}
                 fontWeight={400}
                 color={'#fff'}
+                _hover={{
+                  background:
+                    'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)',
+                }}
                 // w={'119px'}
                 // h="30px"
                 // p={4}
