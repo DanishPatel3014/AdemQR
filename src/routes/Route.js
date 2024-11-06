@@ -24,6 +24,7 @@ import AdsPerformance from '../views/TruckerDashboard/AdsPerformance';
 import ReferFriend from '../views/TruckerDashboard/ReferFriend';
 import RefferalEarning from '../views/TruckerDashboard/RefferalEarning';
 import ChartNew from '../views/TruckerDashboard/ChartNew';
+<<<<<<< Updated upstream
 import WebHome from '../views/Website/WebHome';
 import Weblayout from '../layout/Weblayout';
 import Advertisers from '../views/Website/Advertisers';
@@ -31,6 +32,11 @@ import Trucker from '../views/Website/Trucker';
 import Faqs from '../views/Website/Faqs';
 import ContactUs from '../views/Website/ContactUs';
 import Login from '../views/Website/Login';
+=======
+import TruckerDashboardLayout from '../layout/TruckerDashboardLayout';
+import TruckerDetail from '../views/TruckerDashboard/TruckDetail';
+import Earning from '../views/TruckerDashboard/Earning';
+>>>>>>> Stashed changes
 
 export const UserContext = createContext();
 
@@ -60,14 +66,22 @@ export default function AppRoute() {
         <Route path="ad-details" element={<AdDetails />} />
         <Route path="manage-ad-detail" element={<ManageAdDetail />} />
         {/* Advertiser Routes */}
+      </Route>
+      <Route path="/trucker" element={<TruckerDashboardLayout />}>
         {/* Trucker Dashboard */}
         <Route path="check" element={<Check />} />
-        <Route path="trucker-dashboard" element={<TruckerDashboard />} />
+        <Route path="dashboard" element={<TruckerDashboard />} />
+        <Route path="my-truck" element={<BrowseTruck />} />
+        <Route path="truck-details" element={<TruckerDetail />} />
         <Route path="add-truck" element={<AddTruck />} />
+        <Route path="edit-truck" element={<AddTruck />} />
         <Route path="ads-performance" element={<AdsPerformance />} />
+        <Route path="earning" element={<Earning />} />
         <Route path="refer-friend" element={<ReferFriend />} />
         <Route path="referral-earning" element={<RefferalEarning />} />
         <Route path="checking" element={<ChartNew />} />
+        <Route path="notifications" element={<Notifications />} />
+        <Route path="support" element={<Support />} />
         {/* Trucker Dashboard */}
       </Route>
     </Routes>

@@ -1,8 +1,12 @@
 import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
 import Truck from '../../../assets/images/truck.png';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function TruckCard() {
+  const location = useLocation();
+  const checkPath = location.pathname.split('/')[1];
+  const navigate = useNavigate();
   return (
     <Stack
       h="425px"
@@ -12,6 +16,12 @@ function TruckCard() {
       direction={'column'}
       justifyContent={'space-between'}
       pb={3}
+      cursor={'pointer'}
+      onClick={() => {
+        checkPath === 'trucker'
+          ? navigate('/trucker/truck-details')
+          : navigate('/dashboard/manage-ads');
+      }}
     >
       <Stack h={'207px'}>
         <Image w={'100%'} h={'100%'} src={Truck} />
