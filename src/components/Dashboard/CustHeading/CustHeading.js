@@ -6,7 +6,13 @@ function CustHeading({ name }) {
     <Heading
       fontSize={'32px'}
       color={'#fff'}
-      pb={name === 'Refer a Friend' || name === 'Referral Earning' ? 0 : 4}
+      pb={
+        name === 'Refer a Friend' ||
+        name === 'Referral Earning' ||
+        name === 'My Trucks'
+          ? 0
+          : 4
+      }
       fontWeight={400}
       letterSpacing={'0px'}
       fontFamily={'Montserrat'}

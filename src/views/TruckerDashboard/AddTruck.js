@@ -11,12 +11,17 @@ import React from 'react';
 import CustHeading from '../../components/Dashboard/CustHeading/CustHeading';
 import TruckUpload from '../../assets/images/truck_upload.png';
 import CustInput from '../../components/Dashboard/CustHeading/CustInput';
+import { useLocation } from 'react-router-dom';
 
 function AddTruck() {
+  const location = useLocation();
+  const checkPath = location.pathname.split('/')[2];
   return (
-    <Stack px={4} pb={4} overflowY={'auto'} overflowX={'hidden'}>
-      <CustHeading name={'Add Truck'} />
-      <Stack direction={'row'} gap={4} pb={16} cursor={'pointer'}>
+    <Stack px={4} pb={16} overflowY={'auto'} overflowX={'hidden'}>
+      <CustHeading
+        name={checkPath === 'add-truck' ? 'Add Truck' : 'Edit Truck'}
+      />
+      <Stack direction={'row'} gap={4} pb={6} cursor={'pointer'}>
         <Stack
           w={'40%'}
           h={'145px'}
@@ -47,7 +52,7 @@ function AddTruck() {
           <Image borderRadius={'10px'} src={Dummy} w={'100%'} h={'100%'} />
         </Stack> */}
       </Stack>
-      <Stack direction={'column'} gap={6}>
+      <Stack direction={'column'} gap={4}>
         <HStack
           w={'100%'}
           direction={'row'}
@@ -176,18 +181,50 @@ function AddTruck() {
             <CustInput name={'Type here'} />
           </Box>
 
-          <Box w={'30%'} pt={4}>
+          <Box
+            w={'30%'}
+            h={'89%'}
+            display={'flex'}
+            alignItems={'end'}
+            flexDirection={'row'}
+          >
             <Button
               width={'100%'}
               bg="linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)"
               color="#fff"
               fontWeight={400}
               borderRadius={'7px'}
+              _hover={{
+                bgGradient: 'linear(180deg, #7F48D6 0%, #C086EC 100%)',
+              }}
             >
-              Pay Now
+              {checkPath === 'add-truck' ? 'Post Truck' : 'Save Edits'}
             </Button>
           </Box>
-          <Box w={'30%'}></Box>
+          {checkPath === 'add-truck' ? (
+            <Box w={'30%'}></Box>
+          ) : (
+            <Box
+              w={'30%'}
+              h={'89%'}
+              display={'flex'}
+              alignItems={'end'}
+              flexDirection={'row'}
+            >
+              <Button
+                width={'100%'}
+                bgGradient="linear(180deg, #FC0045 0%, #6E0016 100%)"
+                borderRadius="7px"
+                color="#fff"
+                fontWeight={400}
+                _hover={{
+                  bgGradient: 'linear(180deg, #FC0045 0%, #6E0016 100%)',
+                }}
+              >
+                Cancel Edit
+              </Button>
+            </Box>
+          )}
         </HStack>
       </Stack>
     </Stack>

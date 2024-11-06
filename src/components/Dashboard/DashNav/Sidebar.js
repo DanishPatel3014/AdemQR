@@ -13,7 +13,7 @@ import User from '../../../assets/images/avatar.png';
 import logo from '../../../assets/images/logo.png';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-function Sidebar() {
+function Sidebar({ data }) {
   const navigate = useNavigate();
   const location = useLocation();
   console.log(location);
@@ -64,7 +64,7 @@ function Sidebar() {
             }}
             w={'90%'}
           >
-            {NAV_ITEMS.map((val, ind) => (
+            {(data ? data : NAV_ITEMS).map((val, ind) => (
               <ListItem key={ind} mb={'10px !important'}>
                 <Stack>
                   <Button

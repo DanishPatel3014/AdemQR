@@ -6,14 +6,15 @@ export const NAV_ITEMS = [
   { name: 'Supports', value: '/dashboard/support' },
   { name: 'Notifications', value: '/dashboard/notifications' },
 ];
-// export const NAV_ITEMS = [
-//   // { name: 'Dashboard', value: '/dashboard' },
-//   // { name: 'Browse Trucks', value: '/dashboard/browse-truck' },
-//   // { name: 'Manage Ads', value: '/dashboard/manage-ads' },
-//   { name: 'Ads Performance', value: '/dashboard/ads-performance' },
-//   { name: 'Supports', value: '/dashboard/support' },
-//   { name: 'Notifications', value: '/dashboard/notifications' },
-// ];
+export const NAV_ITEMS_TRUCKER = [
+  { name: 'Dashboard', value: '/trucker/dashboard' },
+  { name: 'My Trucks', value: '/trucker/my-truck' },
+  { name: 'Earnings', value: '/trucker/earning' },
+  { name: 'Refferal Network', value: '/trucker/referral-earning' },
+  { name: 'Ads Performance', value: '/trucker/ads-performance' },
+  { name: 'Supports', value: '/trucker/support' },
+  { name: 'Notifications', value: '/trucker/notifications' },
+];
 export const STATS = [
   {
     name: 'Active Ads',
