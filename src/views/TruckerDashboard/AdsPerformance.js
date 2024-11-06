@@ -35,6 +35,7 @@ function AdsPerformance() {
                 gap={4}
                 alignItems={'center'}
                 borderRadius={'15px'}
+                pl={4}
               >
                 <Image
                   src={Truck}

@@ -149,6 +149,7 @@ function ReferFriend() {
             color={'#fff'}
             w="224px"
             h="48px"
+            _hover={{ bg: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)' }}
           >
             Share on Facebook
           </Button>
@@ -161,6 +162,7 @@ function ReferFriend() {
             color={'#fff'}
             w="224px"
             h="48px"
+            _hover={{ bg: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)' }}
           >
             Share on Insta
           </Button>
@@ -172,6 +174,7 @@ function ReferFriend() {
             fontSize={'16px'}
             color={'#fff'}
             w="224px"
+            _hover={{ bg: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)' }}
             h="48px"
           >
             Share on Whatsapp

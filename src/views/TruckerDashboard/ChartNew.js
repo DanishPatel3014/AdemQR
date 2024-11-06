@@ -20,13 +20,15 @@ const ReferralEarnings = () => {
       p={6}
       borderRadius={'20px'}
       w="100%"
+      h={'100%'}
+      // pt={4}
     >
-      <Stack w="100%" h={'100%'} direction={'row'}>
+      <Stack w="100%" h={'100%'} direction={'row'} py={3}>
         {/* Semi-Doughnut Chart */}
         <Stack
           flexDirection={'column'}
           gap={6}
-          w="40%"
+          w="100%"
           //   border={'1px solid #fff'}
         >
           <Text fontSize={'22px'} fontWeight={500} fontFamily={'Montserrat'}>
@@ -71,7 +73,7 @@ const ReferralEarnings = () => {
             alignItems="center"
             mt={6}
             pos="absolute"
-            top={-240}
+            top={{ lg: -100, '2xl': -240 }}
             right={-78}
           >
             <ResponsiveContainer>

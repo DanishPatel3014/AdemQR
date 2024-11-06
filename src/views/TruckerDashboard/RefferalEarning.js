@@ -99,6 +99,7 @@ function RefferalEarning() {
         alignItems={'center'}
         justifyContent={'space-between'}
         pb={4}
+        pr={2}
       >
         <CustHeading name={'Referral Earning'} />
         <Button
