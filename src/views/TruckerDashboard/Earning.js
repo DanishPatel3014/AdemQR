@@ -37,10 +37,10 @@ function Earning() {
         <ChartNew />
       </Stack>
       <Stack w="100%" py={4} direction={'row'}>
-        <Stack w="80%">
+        <Stack w="75%">
           <CustTable header={dataHeaders} data={dataColumns} />
         </Stack>
-        <Stack w="20%">
+        <Stack w="25%">
           <Check1 />
         </Stack>
       </Stack>
