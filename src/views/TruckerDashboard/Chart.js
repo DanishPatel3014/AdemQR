@@ -41,6 +41,7 @@ function TruckAdsRevenue() {
       color="white"
       textAlign="center"
       width="100%"
+      // h="97%"
     >
       <Text
         fontWeight="500"
