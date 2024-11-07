@@ -9,11 +9,12 @@ const data = {
   labels: ['Active', 'Completed'],
   datasets: [
     {
-      data: [67, 63], // Active: 67%, Completed: 33%
-      backgroundColor: ['#48BB78', '#9F7AEA'], // Active: Green, Completed: Purple
-      hoverBackgroundColor: ['#38A169', '#805AD5'],
+      data: [67, 33], // Active: 67%, Completed: 33%
+      backgroundColor: ['#A17DFF', '#5636CB'], // Active: Green, Completed: Purple
+      hoverBackgroundColor: ['#A17DFF', '#5636CB'],
       borderWidth: 0, // No border around segments
       cutout: '60%', // Thicker arc
+      spacing: 12,
     },
   ],
 };
@@ -37,55 +38,55 @@ export default function Check1({ name }) {
     <Box
       bg="#00092D"
       borderRadius="20px"
-      p={4}
+      p={6}
       w="100%"
-      h={'340px'}
-      mx={name ? 0 : 4}
+      h={'100%'}
+      // maxW="600px" // Adjust max width for responsiveness
+      // mx={name ? 0 : 4}
     >
-      <VStack spacing={3}>
-        <Stack w={'100%'} px={4}>
-          <Text fontSize="22px" fontWeight="medium" color="white">
+      <VStack spacing={4}>
+        <Stack w="100%" px={4}>
+          <Text fontSize="24px" fontWeight="medium" color="white">
             {name ? 'Performance Metrics' : 'Ads Status'}
           </Text>
         </Stack>
 
-        <Text fontSize="32px" fontWeight="medium" color="white">
+        <Text fontSize="36px" fontWeight="medium" color="white">
           1342
         </Text>
         <Text
-          fontSize="18px"
-          fontWeight={'200'}
+          fontSize="20px"
+          fontWeight="200"
           color={name ? '#C086EC' : '#F3EEFE'}
-          mb={2}
+          mb={3}
         >
           Total {name ? 'Impressions' : 'Employment'}
         </Text>
 
-        <Center position="relative" w="150px" h="150px">
-          {''}
+        <Center position="relative" w="220px" h="220px">
           <Doughnut data={data} options={options} />
-          <Box position="absolute" top="5%" left="20px">
-            <Text fontSize="14px" color="#fff">
-              33
+          <Box position="absolute" top="10%" left="25px">
+            <Text fontSize="16px" color="#fff">
+              33%
             </Text>
           </Box>
-          <Box position="absolute" top="5%" right="20px">
-            <Text fontSize="14px" color="#fff">
-              67
+          <Box position="absolute" top="10%" right="25px">
+            <Text fontSize="16px" color="#fff">
+              67%
             </Text>
           </Box>
         </Center>
 
-        <Flex justifyContent="center" m={'0 !important'}>
-          <Flex alignItems="center" mr={4}>
-            <Box bg="green.400" borderRadius="full" h={2} w={2} mr={2}></Box>
-            <Text fontSize="xs" color="gray.300">
-              {name ? 'impressions' : 'Active'}
+        <Flex justifyContent="center" m={'0 !important'} mt>
+          <Flex alignItems="center" mr={6}>
+            <Box bg="#A17DFF" borderRadius="full" h={3} w={3} mr={2}></Box>
+            <Text fontSize="sm" color="gray.300">
+              {name ? 'Impressions' : 'Active'}
             </Text>
           </Flex>
           <Flex alignItems="center">
-            <Box bg="purple.400" borderRadius="full" h={2} w={2} mr={2}></Box>
-            <Text fontSize="xs" color="gray.300">
+            <Box bg="#5636CB" borderRadius="full" h={3} w={3} mr={2}></Box>
+            <Text fontSize="sm" color="gray.300">
               {name ? 'QR Scans' : 'Completed'}
             </Text>
           </Flex>

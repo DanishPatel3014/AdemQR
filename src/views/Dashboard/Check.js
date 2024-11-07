@@ -98,13 +98,13 @@ const options = {
 };
 export default function Check({ name }) {
   return (
-    <Box w="100%" display={'flex'}>
+    <Box w="100%" h="100%" display={'flex'} gap={6}>
       <Stack
         w={name ? '100%' : '70%'}
         bg="#00092D"
         p={6}
         borderRadius="20px"
-        h="340px"
+        h="100%"
       >
         {' '}
         <Text pb={2} fontSize={'20px'} color={'#fff'} fontWeight={500}>
