@@ -23,6 +23,16 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 function AdDetails() {
   const [primary, setPrimary] = useState('#A17DFF');
   const [secondary, setSecondary] = useState('#5636CB');
+  const [imageURL, setImageURL] = useState(null);
+
+  const handleImageUpload = event => {
+    const file = event.target.files[0];
+    if (file) {
+      const blobURL = URL.createObjectURL(file);
+      console.log(blobURL);
+      setImageURL(blobURL);
+    }
+  };
   return (
     <Stack px={4} pb={4} overflowY={'auto'}>
       <CustHeading name={'Ad Details & Customization'} />
@@ -40,7 +50,9 @@ function AdDetails() {
                 flexDirection={'row'}
                 justifyContent={'center'}
                 alignItems={'center'}
+                cursor={'pointer'}
                 bg={'#00092D '}
+                onClick={() => document.getElementById('fileId').click()}
               >
                 <Text
                   fontSize="18px"
@@ -51,13 +63,21 @@ function AdDetails() {
                   Upload Logo
                 </Text>
               </Stack>
+              <Input
+                id="fileId"
+                type="file"
+                onChange={handleImageUpload}
+                display={'none'}
+              />
               <Stack w="30%" h="145px" borderRadius={'10px'}>
-                <Image
-                  borderRadius={'10px'}
-                  src={Dummy}
-                  w={'100%'}
-                  h={'100%'}
-                />
+                {imageURL && (
+                  <Image
+                    borderRadius={'10px'}
+                    src={imageURL}
+                    w={'100%'}
+                    h={'100%'}
+                  />
+                )}
               </Stack>
             </Stack>
             <Stack

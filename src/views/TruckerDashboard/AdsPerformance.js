@@ -1,11 +1,13 @@
 import { Heading, HStack, Image, Stack, Text } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 import CustHeading from '../../components/Dashboard/CustHeading/CustHeading';
 import ManageAdDetail from '../Dashboard/ManageAdDetail';
 import Check1 from '../Dashboard/Check1';
 import Truck from '../../assets/images/truck.png';
 
 function AdsPerformance() {
+  const [index, setIndex] = useState(0);
+
   return (
     <Stack px={4} pb={4} overflowY={'auto'} overflowX={'hidden'}>
       <CustHeading name={'Ads Performance'} />
@@ -25,17 +27,20 @@ function AdsPerformance() {
             </Heading>
           </Stack>
           <Stack direction={'column'} gap={4} px={4} pb={6}>
-            {[1, 2, 3, 4]?.map((item, index) => (
+            {[1, 2, 3, 4]?.map((item, ind) => (
               <Stack
-                key={index}
+                cursor={'pointer'}
+                onClick={() => setIndex(ind)}
+                key={ind}
                 w={'100%'}
                 minH={'148px'}
-                bg={'#000D41'}
+                bg={index === ind ? '#071A67' : '#000D41'}
                 direction={{ xl: 'column', '2xl': 'row' }}
                 gap={4}
                 alignItems={'center'}
                 borderRadius={'15px'}
                 pl={4}
+                border={index === ind ? '1px solid #C086EC' : ''}
               >
                 <Image
                   src={Truck}
