@@ -4,18 +4,35 @@ import {
   FormLabel,
   HStack,
   Image,
+  Input,
   Stack,
   Text,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CustHeading from '../../components/Dashboard/CustHeading/CustHeading';
-import TruckUpload from '../../assets/images/truck_upload.png';
 import CustInput from '../../components/Dashboard/CustHeading/CustInput';
 import { useLocation } from 'react-router-dom';
+import { SmallCloseIcon } from '@chakra-ui/icons';
 
 function AddTruck() {
   const location = useLocation();
   const checkPath = location.pathname.split('/')[2];
+  const [imageURLs, setImageURLs] = useState([]);
+  const handleImageUpload = event => {
+    const files = event.target.files;
+
+    const newImageURLs = Array.from(files).map(file =>
+      URL.createObjectURL(file)
+    );
+    setImageURLs(prevImageURLs => [...prevImageURLs, ...newImageURLs]);
+  };
+
+  useEffect(() => {
+    return () => {
+      imageURLs.forEach(url => URL.revokeObjectURL(url));
+    };
+  }, [imageURLs]);
+
   return (
     <Stack px={4} pb={16} overflowY={'auto'} overflowX={'hidden'}>
       <CustHeading
@@ -31,6 +48,8 @@ function AddTruck() {
           justifyContent={'center'}
           alignItems={'center'}
           bg={'#00092D '}
+          cursor={'pointer'}
+          onClick={() => document.getElementById('fileId').click()}
         >
           <Text
             fontSize="18px"
@@ -41,14 +60,41 @@ function AddTruck() {
             Upload Pics
           </Text>
         </Stack>
+        <Input
+          type="file"
+          multiple
+          id="fileId"
+          onChange={handleImageUpload}
+          display={'none'}
+        />
         <Stack w="60%" direction={'row'} gap={4}>
-          <Image w="145px" h="145px" src={TruckUpload} alt="truck_upload" />
-          <Image w="145px" h="145px" src={TruckUpload} alt="truck_upload" />
-          <Image w="145px" h="145px" src={TruckUpload} alt="truck_upload" />
+          {imageURLs.map((url, index) => (
+            <Stack position={'relative'} key={index}>
+              <Image
+                borderRadius={'12px'}
+                w="145px"
+                h="145px"
+                src={url}
+                alt={`Preview ${index + 1}`}
+              />
+              <Box
+                display={'flex'}
+                justifyContent={'center'}
+                alignItems={'center'}
+                w="17px"
+                h="17px"
+                bg="#C086EC"
+                borderRadius={'50%'}
+                pos={'absolute'}
+                right={2}
+                top={0}
+                onClick={() => setImageURLs(prevImageURLs => prevImageURLs.slice(0, index).concat(prevImageURLs.slice(index + 1)))}
+              >
+                <SmallCloseIcon color={'#fff'} />
+              </Box>
+            </Stack>
+          ))}
         </Stack>
-        {/* <Stack w="30%" h="145px" borderRadius={'10px'}>
-          <Image borderRadius={'10px'} src={Dummy} w={'100%'} h={'100%'} />
-        </Stack> */}
       </Stack>
       <Stack direction={'column'} gap={4}>
         <HStack

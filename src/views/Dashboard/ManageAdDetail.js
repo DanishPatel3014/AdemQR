@@ -9,12 +9,18 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 import CustHeading from '../../components/Dashboard/CustHeading/CustHeading';
-import Truck from '../../assets/images/truck.png';
 import Check1 from './Check1';
+import Truck from '../../assets/images/truck.png';
+import Truck2 from '../../assets/images/bg.jpg';
+import Truck3 from '../../assets/images/dummy.png';
+import Truck4 from '../../assets/images/truck_upload.png';
+import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 
 function ManageAdDetail({ name }) {
+  const images = [Truck, Truck2, Truck3, Truck4];
+  const [imageIndex, setImageIndex] = useState(0);
   return (
     <Stack px={!name && 4} pb={!name && 4} overflowY={'auto'}>
       {!name && <CustHeading name={'Manage Ad Details'} />}
@@ -56,7 +62,7 @@ function ManageAdDetail({ name }) {
               fontWeight={400}
               color={'#fff'}
               _hover={{
-                background:'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)',
+                background: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)',
               }}
               // w={'119px'}
               // h="30px"
@@ -92,25 +98,42 @@ function ManageAdDetail({ name }) {
                 h={'100%'}
                 direction={'column'}
               >
-                <Box width={'100%'} h="100px">
-                  <Image src={Truck} w={'100%'} h={'100%'} />
-                </Box>
-                <Box width={'100%'} h="100px">
-                  <Image src={Truck} w={'100%'} h={'100%'} />
-                </Box>
-                <Box width={'100%'} h="100px">
-                  <Image src={Truck} w={'100%'} h={'100%'} />
-                </Box>
-                <Box width={'100%'} h="100px">
-                  <Image src={Truck} w={'100%'} h={'100%'} />
-                </Box>
+                {images?.map((item, index) => (
+                  <Box
+                    cursor={'pointer'}
+                    mb={1}
+                    key={index}
+                    width={'100%'}
+                    h="100px"
+                    onClick={() => setImageIndex(index)}
+                  >
+                    <Image
+                      borderRadius={'12px'}
+                      src={item}
+                      w={'100%'}
+                      h={'100%'}
+                    />
+                  </Box>
+                ))}
               </Stack>
 
               <Stack width={'80%'} h={'100%'}>
-                <Image src={Truck} w={'100%'} h={'100%'} />
+                <Image
+                  borderRadius={'12px'}
+                  src={images[imageIndex]}
+                  w={'100%'}
+                  h={'100%'}
+                />
               </Stack>
             </Stack>
-            <Stack px={2} pt={3}>
+            <Stack
+              direction={'row'}
+              alignItems={'center'}
+              justifyContent={'space-between'}
+              pb={2}
+              px={2}
+              pt={3}
+            >
               <Heading
                 fontFamily={'Montserrat'}
                 fontSize={'18px'}
@@ -119,6 +142,46 @@ function ManageAdDetail({ name }) {
               >
                 Truck Details
               </Heading>
+              <HStack>
+                <Box
+                  display={'flex'}
+                  justifyContent={'center'}
+                  alignItems={'center'}
+                  w="28px"
+                  h="28px"
+                  bg="#C086EC"
+                  borderRadius="50%"
+                  cursor={'pointer'}
+                  onClick={() => {
+                    if (imageIndex === 0) {
+                      setImageIndex(images.length - 1);
+                    } else {
+                      setImageIndex(imageIndex - 1);
+                    }
+                  }}
+                >
+                  <ChevronLeftIcon fontSize={'24px'} color={'#fff'} />
+                </Box>
+                <Box
+                  display={'flex'}
+                  justifyContent={'center'}
+                  alignItems={'center'}
+                  w="28px"
+                  h="28px"
+                  bg="#C086EC"
+                  borderRadius="50%"
+                  cursor={'pointer'}
+                  onClick={() => {
+                    if (imageIndex === images.length - 1) {
+                      setImageIndex(0);
+                    } else {
+                      setImageIndex(imageIndex + 1);
+                    }
+                  }}
+                >
+                  <ChevronRightIcon fontSize={'24px'} color={'#fff'} />
+                </Box>
+              </HStack>
             </Stack>
             <Stack
               w="100%"

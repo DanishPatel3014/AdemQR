@@ -80,6 +80,7 @@ export default function AppRoute() {
         <Route path="support" element={<Support />} />
         {/* Trucker Dashboard */}
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

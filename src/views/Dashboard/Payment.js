@@ -7,7 +7,7 @@ function Payment() {
   return (
     <Stack px={4} pb={4} overflowY={'auto'}>
       <CustHeading name={'Payment'} />
-      <Stack direction={'column'} gap={4}>
+      <Stack direction={'column'} gap={4} pt={2}>
         <HStack
           w={'70%'}
           direction={'row'}
@@ -95,7 +95,7 @@ function Payment() {
       </Stack>
       <Stack w="70%" direction={'row'} justifyContent={'center'} py={4}>
         <Button
-          w={'170px !important'}
+          w={'20%'}
           h="48px"
           bg="linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)"
           color="#fff"
