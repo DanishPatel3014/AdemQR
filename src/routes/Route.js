@@ -34,7 +34,6 @@ import Login from '../views/Website/Login';
 import TruckerDashboardLayout from '../layout/TruckerDashboardLayout';
 import TruckerDetail from '../views/TruckerDashboard/TruckDetail';
 import Earning from '../views/TruckerDashboard/Earning';
-
 export const UserContext = createContext();
 
 export default function AppRoute() {
