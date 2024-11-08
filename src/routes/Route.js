@@ -35,6 +35,7 @@ import TruckerDashboardLayout from '../layout/TruckerDashboardLayout';
 import TruckerDetail from '../views/TruckerDashboard/TruckDetail';
 import Earning from '../views/TruckerDashboard/Earning';
 import PreviewLink from '../views/Dashboard/PreviewLink';
+import ReferralNetwork from '../views/TruckerDashboard/ReferralNetwork';
 export const UserContext = createContext();
 
 export default function AppRoute() {
@@ -72,6 +73,7 @@ export default function AppRoute() {
         <Route path="my-truck" element={<BrowseTruck />} />
         <Route path="truck-details" element={<TruckerDetail />} />
         <Route path="add-truck" element={<AddTruck />} />
+        <Route path="referral-network" element={<ReferralNetwork />} />
         <Route path="edit-truck" element={<AddTruck />} />
         <Route path="ads-performance" element={<AdsPerformance />} />
         <Route path="earning" element={<Earning />} />
