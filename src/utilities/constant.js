@@ -51,3 +51,21 @@ export const Trucker_STATS = [
     value: '5',
   },
 ];
+export const Trucker_Refferal_NETWORK = [
+  {
+    name: 'Referrals Earning',
+    value: '$2,500',
+  },
+  {
+    name: 'New Referrals',
+    value: '8',
+  },
+  {
+    name: 'Active Referrals',
+    value: '50',
+  },
+  {
+    name: 'Inactive Refferals',
+    value: '5',
+  },
+];
