@@ -34,6 +34,7 @@ import Login from '../views/Website/Login';
 import TruckerDashboardLayout from '../layout/TruckerDashboardLayout';
 import TruckerDetail from '../views/TruckerDashboard/TruckDetail';
 import Earning from '../views/TruckerDashboard/Earning';
+import PreviewLink from '../views/Dashboard/PreviewLink';
 export const UserContext = createContext();
 
 export default function AppRoute() {
@@ -60,6 +61,7 @@ export default function AppRoute() {
         <Route path="payment" element={<Payment />} />
         <Route path="reports" element={<Reports />} />
         <Route path="ad-details" element={<AdDetails />} />
+        <Route path="preview-link" element={<PreviewLink />} />
         <Route path="manage-ad-detail" element={<ManageAdDetail />} />
         {/* Advertiser Routes */}
       </Route>
