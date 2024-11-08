@@ -4,8 +4,17 @@ import User from '../../../assets/images/user.png';
 
 function RefferalUserStat() {
   return (
-    <Box p={6} bg={'#000d41'} display={'flex'} flexDirection={'column'} gap={6} borderRadius={'20px'} w="100%" h="140px">
-      <HStack gap={4}>
+    <Box
+      p={{ xl: 4, '2xl': 6 }}
+      bg={'#000d41'}
+      display={'flex'}
+      flexDirection={'column'}
+      gap={6}
+      borderRadius={'20px'}
+      w="100%"
+      h="140px"
+    >
+      <HStack gap={{ xl: 2, '2xl': 4 }}>
         <Stack
           w="50px"
           h="50px"
@@ -14,11 +23,19 @@ function RefferalUserStat() {
         >
           <Image src={User} alt="user" w="100%" h="100%" />
         </Stack>
-        <Text fontSize={'22px'} fontWeight={600} fontFamily={'Montserrat'}>
+        <Text
+          fontSize={{ xl: '18px', '2xl': '22px' }}
+          fontWeight={600}
+          fontFamily={'Montserrat'}
+        >
           John Doe
         </Text>
       </HStack>
-      <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'}>
+      <Stack
+        direction={'row'}
+        alignItems={'center'}
+        justifyContent={'space-between'}
+      >
         <Text fontSize={'14px'} fontFamily={'Rubik'} color={'#7e798b'}>
           Original Referral
         </Text>
@@ -32,7 +49,7 @@ function RefferalUserStat() {
             <Image src={User} alt="user" w="100%" h="100%" />
           </Stack>
           <Text
-            fontSize={'14px'}
+            fontSize={{ xl: '14px', '2xl': '12px' }}
             color={'#fff'}
             fontWeight={'normal'}
             fontFamily={'Rubik'}
