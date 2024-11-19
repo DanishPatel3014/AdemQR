@@ -100,9 +100,9 @@ function AddTruck() {
         <HStack
           w={'100%'}
           direction={'row'}
-          //   justifyContent={'space-between'}
+           
           alignItems={'center'}
-          gap={10}
+          gap={{base:6,  sm : 6, md: 2 , xl:10, "2xl": 10}} 
           flexWrap={'wrap'}
           //   pr={4}
         >
@@ -154,7 +154,7 @@ function AddTruck() {
           direction={'row'}
           //   justifyContent={'space-between'}
           alignItems={'center'}
-          gap={10}
+          gap={{base:6,  sm : 6, md: 2 , xl:10, "2xl": 10}} 
           flexWrap={'wrap'}
           //   pr={4}
         >
@@ -204,9 +204,9 @@ function AddTruck() {
         <HStack
           w={'100%'}
           direction={'row'}
-          //   justifyContent={'space-between'}
-          alignItems={'center'}
-          gap={10}
+        
+          alignItems={'end'}
+          gap={{base:6,  sm : 6, md: 2 , xl:10, "2xl": 10}} 
           flexWrap={'wrap'}
           //   pr={4}
         >

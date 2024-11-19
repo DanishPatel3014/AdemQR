@@ -31,6 +31,14 @@ export default function Packages() {
         { name: 'Standard QR code with no .' },
         { name: 'Access to basic performance .' },
         { name: 'Option to include basic .' },
+        { name: 'Fixed content that does not require updates.' },
+        { name: 'Standard QR code with no customization.' },
+        { name: 'Access to basic performance metrics.' },
+        { name: 'Option to include basic customization.' },
+        { name: 'Fixed content that does not require updates.' },
+        { name: 'Standard QR code with no .' },
+        { name: 'Access to basic performance .' },
+        { name: 'Option to include basic .' },
       ],
     },
     {
@@ -45,12 +53,28 @@ export default function Packages() {
         { name: 'Standard QR code with no .' },
         { name: 'Access to basic performance .' },
         { name: 'Option to include basic .' },
+        { name: 'Fixed content that does not require updates.' },
+        { name: 'Standard QR code with no customization.' },
+        { name: 'Access to basic performance metrics.' },
+        { name: 'Option to include basic customization.' },
+        { name: 'Fixed content that does not require updates.' },
+        { name: 'Standard QR code with no .' },
+        { name: 'Access to basic performance .' },
+        { name: 'Option to include basic .' },
       ],
     },
     {
       Packagename: 'Premium Package',
       rate: '$500',
       package: [
+        { name: 'Fixed content that does not require updates.' },
+        { name: 'Standard QR code with no customization.' },
+        { name: 'Access to basic performance metrics.' },
+        { name: 'Option to include basic customization.' },
+        { name: 'Fixed content that does not require updates.' },
+        { name: 'Standard QR code with no .' },
+        { name: 'Access to basic performance .' },
+        { name: 'Option to include basic .' },
         { name: 'Fixed content that does not require updates.' },
         { name: 'Standard QR code with no customization.' },
         { name: 'Access to basic performance metrics.' },
@@ -171,10 +195,12 @@ export default function Packages() {
                       For individuals or small teams looking to explore the
                       platform's capabilities.
                     </Text>
-                    <UnorderedList
+                  <Stack ml={0} h={'292px'} overflowY={'scroll'}>
+                  <UnorderedList
                       listStyleType={'none'}
                       color={'#fff'}
                       spacing={4}
+                      ml={0}
                     >
                       {v.package?.length > 0 &&
                         v.package?.map((item, index) => {
@@ -200,6 +226,7 @@ export default function Packages() {
                           );
                         })}
                     </UnorderedList>
+                  </Stack>
                     <Link to={'/register'} as={ReactLink}>
                       <Button
                         display={{ base: 'none', md: 'inline-flex' }}

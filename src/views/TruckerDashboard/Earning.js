@@ -1,4 +1,4 @@
-import { SimpleGrid, Stack } from '@chakra-ui/react';
+import { SimpleGrid, Stack , Grid, GridItem} from '@chakra-ui/react';
 import CustHeading from '../../components/Dashboard/CustHeading/CustHeading';
 import { Trucker_STATS } from '../../utilities/constant';
 import Stats from '../../components/Dashboard/Stats/Stats';
@@ -31,31 +31,46 @@ function Earning() {
   return (
     <Stack px={4} pb={4} overflowY={'auto'} overflowX={'hidden'}>
       <CustHeading name={'My Trucks Earnings'} />
+      <Grid
+        templateRows="repeat(1, 1fr)"
+        templateColumns="repeat(12, 1fr)"
+        gap={4}
+      >
+        <GridItem colSpan={{base : 12,  sm : 6, md: 6, xl: 6, "2xl": 7}}>
+          <Check name="trucker" />
+        </GridItem>
 
-      <Stack w={'100%'} direction={{base : 'column', md: 'row'}} gap={4}>
-       <Stack  w={{base:'100%',  sm : '100%', md:'40%', xl:'40%', "2xl": '70%'}}>
-       <Check name="trucker" />
-       </Stack>
-        <Stack w={{base:'100%',  sm : '100%', md:'50%', xl:'50%', "2xl": '30%'}}>
-        <ChartNew />
-        </Stack>
-      </Stack>
-      <Stack w="100%" py={4} direction={'row'}>
-        <Stack w={{base:'100%',  sm : '100%', md:'70%', xl:'75%', "2xl": '75%'}}>
-          <CustTable header={dataHeaders} data={dataColumns} />
-        </Stack>
-        <Stack w={{base:'100%',  sm : '100%', md:'25%', xl:'25%', "2xl": '25%'}}>
-          <Check1 />
-        </Stack>
-      </Stack>
-      <Stack w="100%" py={4} direction={'row'}>
-        <Stack w={{base:'100%',  sm : '100%', md:'70%', xl:'75%', "2xl": '75%'}}>
-          <CustTable header={dataHeaders} data={dataColumns} />
-        </Stack>
-        <Stack w={{base:'100%',  sm : '100%', md:'25%', xl:'25%', "2xl": '25%'}}>
-          <Chart />
-        </Stack>
-      </Stack>
+        <GridItem colSpan={{base : 12,  sm : 6, md: 6, xl: 6, "2xl": 5}}>
+          <ChartNew />
+        </GridItem>
+      </Grid>
+      <Grid
+        templateRows="repeat(1, 1fr)"
+        templateColumns="repeat(12, 1fr)"
+        gap={4}
+      >
+        <GridItem colSpan={{base : 12,  sm : 12, md: 9, xl: 9, "2xl": 9}}>
+        <CustTable header={dataHeaders} data={dataColumns} />
+        </GridItem>
+
+        <GridItem colSpan={{base : 12 , sm : 12, md: 3, xl: 3 , "2xl": 3}}>
+        <Check1 />
+        </GridItem>
+      </Grid>
+      <Grid
+        templateRows="repeat(1, 1fr)"
+        templateColumns="repeat(12, 1fr)"
+        gap={4}
+      >
+        <GridItem colSpan={{base : 12,  sm : 12, md: 9, xl: 9, "2xl": 10}}>
+        <CustTable header={dataHeaders} data={dataColumns} />
+        </GridItem>
+
+        <GridItem colSpan={{base : 12 , sm : 12, md: 3, xl: 3 , "2xl": 2}}>
+        <Chart />
+        </GridItem>
+      </Grid>
+       
     </Stack>
   );
 }
