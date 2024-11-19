@@ -1,4 +1,4 @@
-import { SimpleGrid, Stack } from '@chakra-ui/react';
+import { SimpleGrid, Stack, Grid, GridItem } from '@chakra-ui/react';
 import CustHeading from '../../components/Dashboard/CustHeading/CustHeading';
 import { Trucker_STATS } from '../../utilities/constant';
 import Stats from '../../components/Dashboard/Stats/Stats';
@@ -37,22 +37,33 @@ function Home() {
           ))}
         </SimpleGrid>
       </Stack>
-      <Stack w={'100%'} direction={{base : 'column', md: 'column',xl:'row', "2xl": 'row'}} gap={4}>
-        <Stack w={{base:'100%',  sm : '100%', md:'100%', xl:'40%', "2xl": '70%'}}>
+      <Grid
+        templateRows="repeat(1, 1fr)"
+        templateColumns="repeat(12, 1fr)"
+        gap={4}
+      >
+        <GridItem colSpan={{base : 12,  sm : 6, md: 6, xl: 6, "2xl": 7}}>
           <Check name="trucker" />
-        </Stack>
-        <Stack w={{base:'100%',  sm : '100%', md:'100%', xl:'50%', "2xl": '30%'}} position={'relative'}>
+        </GridItem>
+
+        <GridItem colSpan={{base : 12,  sm : 6, md: 6, xl: 6, "2xl": 5}}>
           <ChartNew />
-        </Stack>
-      </Stack>
-      <Stack w="100%" direction={{base : 'column', md: 'row'}}>
-        <Stack w={{base:'100%',  sm : '100%', md:'100%', xl:'70%', "2xl": '80%'}}>
-          <CustTable header={dataHeaders} data={dataColumns} />
-        </Stack>
-        <Stack w={{ lg: '25%', '2xl': '20%' }}>
-          <Chart />
-        </Stack>
-      </Stack>
+        </GridItem>
+      </Grid>
+      <Grid
+        templateRows="repeat(1, 1fr)"
+        templateColumns="repeat(12, 1fr)"
+        gap={4}
+      >
+        <GridItem colSpan={{base : 12,  sm : 12, md: 9, xl: 9, "2xl": 10}}>
+        <CustTable header={dataHeaders} data={dataColumns} />
+        </GridItem>
+
+        <GridItem colSpan={{base : 12 , sm : 12, md: 3, xl: 3 , "2xl": 2}}>
+        <Chart />
+        </GridItem>
+      </Grid>
+    
     </Stack>
   );
 }

@@ -9,7 +9,7 @@ function Payment() {
       <CustHeading name={'Payment'} />
       <Stack direction={'column'} gap={4} pt={2}>
         <HStack
-         w={{base : '100%', md : '70%'}}
+         w={{base:'100%',  sm : '100%', md:'100%', xl:'70%', "2xl": '70%'}}
           direction={'row'}
           justifyContent={'space-between'}
           alignItems={'center'}
@@ -47,7 +47,7 @@ function Payment() {
           </Box>
         </HStack>
         <HStack
-          w={{base : '100%', md : '70%'}}
+          w={{base:'100%',  sm : '100%', md:'100%', xl:'70%', "2xl": '70%'}}
           direction={'row'}
           justifyContent={'space-between'}
           alignItems={'center'}
@@ -93,7 +93,7 @@ function Payment() {
           </Box>
         </HStack>
       </Stack>
-      <Stack  w={{base : '100%', md : '70%'}} direction={'row'} justifyContent={'center'} py={4}>
+      <Stack   w={{base:'100%',  sm : '100%', md:'100%', xl:'70%', "2xl": '70%'}} direction={'row'} justifyContent={'center'} py={4}>
         <Button
           w={{base : '100%', md : '20%'}}
           h="48px"

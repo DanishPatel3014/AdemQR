@@ -69,11 +69,11 @@ function ReferFriend() {
           mr={2}
           border={'1px solid #fff'}
           bg={'transparent'}
-          w="170px"
+          w="150px"
           h="48px"
           borderRadius={'16px'}
           color={'#fff'}
-          fontSize={'16px'}
+          fontSize={'14px'}
           fontWeight={400}
           _hover={{ bg: 'transparent' }}
         >
@@ -93,7 +93,7 @@ function ReferFriend() {
           justifyContent="space-between"
           alignItems="center"
           h={'54px'}
-          w="80%"
+          width={{base:'100%',  sm : '100%', md:'100%', xl:'80%', "2xl": '80%'}}
         >
           <InputGroup>
             <Input
@@ -122,7 +122,7 @@ function ReferFriend() {
           </InputGroup>
         </Box>
       </Stack>
-      <Stack py={4} direction={{base : 'column', md: 'column',xl:'row', "2xl": 'row'}} gap={5}>
+      <Stack py={4}  alignItems={{base:'center',  sm : 'center', md:'center', xl:'left', "2xl": 'left'}} direction={{base : 'column', md: 'column',xl:'row', "2xl": 'row'}} gap={5}>
         <Box
           display={'flex'}
           flexDirection={'column'}
@@ -181,7 +181,7 @@ function ReferFriend() {
           </Button>
         </Box>
       </Stack>
-      <Stack py={4} width={{base : '100%', md : '80%'}}>
+      <Stack py={4} width={{base:'100%',  sm : '100%', md:'100%', xl:'80%', "2xl": '80%'}}>
         <CustTable header={dataHeaders} data={dataColumns} />
       </Stack>
     </Stack>
