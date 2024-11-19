@@ -37,8 +37,8 @@ function AdDetails() {
     <Stack px={4} pb={4} overflowY={'auto'}>
       <CustHeading name={'Ad Details & Customization'} />
       <FreightlinerCard />
-      <SimpleGrid columns={3} spacing="6">
-        <GridItem colSpan={2}>
+      <SimpleGrid columns={12} spacing="6">
+        <GridItem colSpan={{base : 12 ,md : 8}}>
           <Stack py={3}>
             <CustHeading name={'Ad Content'} />
             <Stack direction={'row'} gap={4}>
@@ -184,7 +184,7 @@ function AdDetails() {
             </Stack>
           </Stack>
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={{base : 12, md:  4}}>
           <Stack pt={2}>
             <Stack px={4} py={4} h="300px" bg={'#00092D'} borderRadius={'10px'}>
               <CustHeading name={'Ad Preview'} />

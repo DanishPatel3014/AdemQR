@@ -9,7 +9,7 @@ function Payment() {
       <CustHeading name={'Payment'} />
       <Stack direction={'column'} gap={4} pt={2}>
         <HStack
-          w={'70%'}
+         w={{base : '100%', md : '70%'}}
           direction={'row'}
           justifyContent={'space-between'}
           alignItems={'center'}
@@ -17,7 +17,7 @@ function Payment() {
           flexWrap={'wrap'}
           pr={4}
         >
-          <Box w={'48%'}>
+          <Box w={{base : '100%', md : '48%'}}>
             <FormLabel
               color={'#7E798B'}
               fontSize={'16px'}
@@ -31,7 +31,7 @@ function Payment() {
             </FormLabel>
             <CustInput name={'Type here'} />
           </Box>
-          <Box w={'48%'}>
+          <Box w={{base : '100%', md : '48%'}}>
             <FormLabel
               color={'#7E798B'}
               fontSize={'16px'}
@@ -47,7 +47,7 @@ function Payment() {
           </Box>
         </HStack>
         <HStack
-          w={'70%'}
+          w={{base : '100%', md : '70%'}}
           direction={'row'}
           justifyContent={'space-between'}
           alignItems={'center'}
@@ -55,7 +55,7 @@ function Payment() {
           flexWrap={'wrap'}
           pr={4}
         >
-          <Box w={'48%'}>
+          <Box  w={{base : '100%', md : '48%'}}>
             <FormLabel
               color={'#7E798B'}
               fontSize={'16px'}
@@ -69,7 +69,7 @@ function Payment() {
             </FormLabel>
             <CustInput name={'123'} />
           </Box>
-          <Box w={'48%'}>
+          <Box  w={{base : '100%', md : '48%'}}>
             <FormLabel
               color={'#7E798B'}
               fontSize={'16px'}
@@ -93,9 +93,9 @@ function Payment() {
           </Box>
         </HStack>
       </Stack>
-      <Stack w="70%" direction={'row'} justifyContent={'center'} py={4}>
+      <Stack  w={{base : '100%', md : '70%'}} direction={'row'} justifyContent={'center'} py={4}>
         <Button
-          w={'20%'}
+          w={{base : '100%', md : '20%'}}
           h="48px"
           bg="linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)"
           color="#fff"
