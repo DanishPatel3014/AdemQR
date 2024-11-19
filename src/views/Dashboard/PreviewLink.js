@@ -64,34 +64,34 @@ function PreviewLink() {
             </Box>
           </HStack>
         </Stack>
-        <Stack p={'15px'} bg={'#000D41'} h="77px" pb={4} borderRadius={'11px'}>
+        <Stack p={'15px'} bg={'#000D41'} pb={4} borderRadius={'11px'}>
           <Box w="100%">
             <HStack>
-              <Text flex={1} color={'#834CD7'}>
+              <Text fontSize={{ base : '13px',md : '16px' }} flex={1} color={'#834CD7'}>
                 Company Name
               </Text>
-              <Text flex={1} color={'#834CD7'}>
+              <Text fontSize={{ base : '13px',md : '16px' }} flex={1} color={'#834CD7'}>
                 Truck
               </Text>
-              <Text flex={1} color={'#834CD7'}>
+              <Text fontSize={{ base : '13px',md : '16px' }} flex={1} color={'#834CD7'}>
                 Url
               </Text>
             </HStack>
             <HStack alignItems={'center'}>
-              <Text fontSize={{ xl: '16px' }} flex={1} color={'#fff'}>
+              <Text fontSize={{ base : '13px',md : '16px' }} flex={1} color={'#fff'}>
                 Abc Adertiser
               </Text>
-              <Text fontSize={{ xl: '16px' }} flex={1} color={'#fff'}>
+              <Text fontSize={{ base : '13px',md : '16px' }} flex={1} color={'#fff'}>
                 Volvo 560
               </Text>
-              <Text fontSize={{ xl: '16px' }} flex={1} color={'#fff'}>
+              <Text w={{base : '100px' , md : '100%'}} fontSize={{ base : '13px',md : '16px' }} flex={1} color={'#fff'}>
                 //viewed.com/this_is_the_preview_link
               </Text>
             </HStack>
           </Box>
         </Stack>
-        <Stack w="100%" direction={'row'} gap={4}>
-          <Stack w="20%">
+        <Stack w="100%" direction={{base : 'column', md: 'column',xl:'row', "2xl": 'row'}}  gap={4}>
+          <Stack w={{base : '100%', md : "20%"}}>
             <Stack px={2} py={2}>
               <Heading
                 fontFamily={'Montserrat'}
@@ -106,7 +106,7 @@ function PreviewLink() {
               w="100%"
               p={'15px'}
               bg={'#000D41'}
-              h="77px"
+     
               m={'0 !important'}
               borderRadius={'11px'}
             >
@@ -122,7 +122,7 @@ function PreviewLink() {
               </HStack>
             </Stack>
           </Stack>
-          <Stack w="50%">
+          <Stack  w={{base : '100%', md : "50%"}}>
             <Stack px={2} py={2}>
               <Heading
                 fontFamily={'Montserrat'}
