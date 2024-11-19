@@ -6,6 +6,7 @@ import {
   InputGroup,
   InputLeftElement,
   InputRightElement,
+  Stack,
   Text,
 } from '@chakra-ui/react';
 import React from 'react';
@@ -27,9 +28,10 @@ function SearchNav() {
         justifyContent="space-between"
         alignItems="center"
         h={'54px'}
-        w="97%"
+
       >
-        <InputGroup>
+       <Stack>
+       <InputGroup>
           <InputLeftElement pointerEvents="none">
             <SearchIcon color="#969DA6" />
           </InputLeftElement>
@@ -43,18 +45,21 @@ function SearchNav() {
             color="#fff"
             bg="transparent"
             _placeholder={{ color: '#969DA6' }}
-            pr="150px"
+            pr={{ base: '0', md: '150px' }}
           />
-          <InputRightElement width="auto" pointerEvents="none">
-            <HStack spacing={4} align="center">
+        </InputGroup>
+       </Stack>
+    <Stack display={{base:'none',  sm : 'none', md:'none', xl:'block', "2xl": 'block'}}>
+    <InputGroup>
+        <HStack spacing={4} align="center">
               <IoIosNotifications fontSize="24px" color="#969DA6" />
               <IoMdSettings fontSize="24px" color="#969DA6" />
               <Text fontSize="16px" color="#fff" whiteSpace="nowrap">
                 Wed, Sep 09, 12:45:11
               </Text>
             </HStack>
-          </InputRightElement>
         </InputGroup>
+    </Stack>
       </Box>
       {/* Search bar */}
     </>

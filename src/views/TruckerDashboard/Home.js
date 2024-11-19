@@ -37,16 +37,16 @@ function Home() {
           ))}
         </SimpleGrid>
       </Stack>
-      <Stack w={'100%'} direction={'row'} gap={4}>
-        <Stack w="50%">
+      <Stack w={'100%'} direction={{base : 'column', md: 'column',xl:'row', "2xl": 'row'}} gap={4}>
+        <Stack w={{base:'100%',  sm : '100%', md:'100%', xl:'40%', "2xl": '70%'}}>
           <Check name="trucker" />
         </Stack>
-        <Stack w="50%" position={'relative'}>
+        <Stack w={{base:'100%',  sm : '100%', md:'100%', xl:'50%', "2xl": '30%'}} position={'relative'}>
           <ChartNew />
         </Stack>
       </Stack>
-      <Stack w="100%" py={4} direction={'row'}>
-        <Stack w={{ lg: '75%', '2xl': '80%' }}>
+      <Stack w="100%" direction={{base : 'column', md: 'row'}}>
+        <Stack w={{base:'100%',  sm : '100%', md:'100%', xl:'70%', "2xl": '80%'}}>
           <CustTable header={dataHeaders} data={dataColumns} />
         </Stack>
         <Stack w={{ lg: '25%', '2xl': '20%' }}>

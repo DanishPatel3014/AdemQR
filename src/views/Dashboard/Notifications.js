@@ -9,15 +9,16 @@ function Notifications() {
       <Stack direction={'column'} gap={2}>
         <Stack
           w="80%"
-          h="52px"
+        
           bg="#00092D"
           borderRadius="14px"
           direction={'row'}
           justifyContent={'space-between'}
           alignItems={'center'}
           px={4}
+          py={3}
         >
-          <Text fontSize="18px" fontFamily="Rubik" color={'#fff'}>
+          <Text fontSize="16px" fontFamily="Rubik" color={'#fff'}>
             Your ad on Truck #452 is now live!
           </Text>
           <Text color={'#7E798B'} fontSize={'14px'} fontWeight={500}>
@@ -26,15 +27,16 @@ function Notifications() {
         </Stack>
         <Stack
           w="80%"
-          h="52px"
+        
           bg="#00092D"
           borderRadius="14px"
           direction={'row'}
           justifyContent={'space-between'}
           alignItems={'center'}
           px={4}
+          py={3}
         >
-          <Text fontSize="18px" fontFamily="Rubik" color={'#fff'}>
+          <Text fontSize="16px" fontFamily="Rubik" color={'#fff'}>
             Your ad on Truck #452 is now live!
           </Text>
           <Text color={'#7E798B'} fontSize={'14px'} fontWeight={500}>
@@ -43,15 +45,16 @@ function Notifications() {
         </Stack>
         <Stack
           w="80%"
-          h="52px"
+       
           bg="#00092D"
           borderRadius="14px"
           direction={'row'}
           justifyContent={'space-between'}
           alignItems={'center'}
           px={4}
+          py={3}
         >
-          <Text fontSize="18px" fontFamily="Rubik" color={'#fff'}>
+          <Text fontSize="16px" fontFamily="Rubik" color={'#fff'}>
             Your ad on Truck #452 is now live!
           </Text>
           <Text color={'#7E798B'} fontSize={'14px'} fontWeight={500}>

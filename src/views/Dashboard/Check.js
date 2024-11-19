@@ -98,23 +98,23 @@ const options = {
 };
 export default function Check({ name }) {
   return (
-    <Box w="100%" h="100%" display={'flex'} gap={6}>
+    <Box w="100%"  display={{base : 'block', md : 'flex'}} gap={6}>
       <Stack
-        w={name ? '100%' : '70%'}
+        w={{base : '100%' , md : '100%'}}
         bg="#00092D"
         p={6}
         borderRadius="20px"
-        h="100%"
+       
       >
         {' '}
         <Text pb={2} fontSize={'20px'} color={'#fff'} fontWeight={500}>
           QR Scans
         </Text>
-        <Box w={'100%'} h="100%">
+        <Box w={'100%'} h={'100%'}>
           {' '}
           <Line
             w="100%"
-            h="100%"
+            height={{base : '50%', md : "100%"}}
             data={data}
             options={{
               ...options,
@@ -124,7 +124,7 @@ export default function Check({ name }) {
         </Box>
       </Stack>
       {!name && (
-        <Stack w={name ? '50%' : '30%'}>
+        <Stack mt={{base : 4 , md : 0}} w={{base : '100%' , md : '30%'}}>
           <Check1 />
         </Stack>
       )}

@@ -7,7 +7,7 @@ function Support() {
   return (
     <Stack px={4} pb={4} overflowY={'auto'}>
       <CustHeading name={'Support'} />
-      <Stack w={'70%'} h={'90vh'} bg={'#00092D '} borderRadius={'20px'}>
+      <Stack w={{base : '100%',md : '70%'}} h={'90vh'} bg={'#00092D '} borderRadius={'20px'}>
         <Stack
           w={'100%'}
           h={'100%'}
