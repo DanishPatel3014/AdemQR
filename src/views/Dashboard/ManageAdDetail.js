@@ -25,14 +25,14 @@ function ManageAdDetail({ name }) {
     <Stack px={!name && 4} pb={!name && 4} overflowY={'auto'}>
       {!name && <CustHeading name={'Manage Ad Details'} />}
       <Stack
-        direction={'row'}
+      direction={{base : 'column', md: 'column',xl:'row', "2xl": 'row'}}
         w="100%"
         // h={'auto'}
         pb={6}
         bg="#00092D"
         borderRadius={'10px'}
       >
-        <Box w="70%">
+        <Box w={{base:'100%',  sm : '100%', md:'100%', xl:'70%', "2xl": '70%'}}>
           <Stack
             w={'100%'}
             direction={'row'}
@@ -64,10 +64,6 @@ function ManageAdDetail({ name }) {
               _hover={{
                 background: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)',
               }}
-              // w={'119px'}
-              // h="30px"
-              // p={4}
-              // w={'max-content'}
             >
               Active
             </Button>
@@ -187,7 +183,7 @@ function ManageAdDetail({ name }) {
               w="100%"
               p={'15px'}
               bg={'#000D41'}
-              h="77px"
+             
               pb={4}
               borderRadius={'11px'}
             >
@@ -214,8 +210,8 @@ function ManageAdDetail({ name }) {
                 </Text>
               </HStack>
             </Stack>
-            <Stack w="100%" direction={'row'} gap={4}>
-              <Stack w="30%">
+            <Stack w="100%" direction={{base : 'column', md: 'column',xl:'row', "2xl": 'row'}} gap={4}>
+              <Stack w={{base:'100%',  sm : '100%', md:'100%', xl:'30%', "2xl": '30%'}}>
                 <Stack px={2} py={2}>
                   <Heading
                     fontFamily={'Montserrat'}
@@ -230,7 +226,7 @@ function ManageAdDetail({ name }) {
                   w="100%"
                   p={'15px'}
                   bg={'#000D41'}
-                  h="77px"
+                
                   m={'0 !important'}
                   borderRadius={'11px'}
                 >
@@ -246,7 +242,7 @@ function ManageAdDetail({ name }) {
                   </HStack>
                 </Stack>
               </Stack>
-              <Stack w="70%">
+              <Stack w={{base:'100%',  sm : '100%', md:'100%', xl:'70%', "2xl": '70%'}}>
                 <Stack px={2} py={2}>
                   <Heading
                     fontFamily={'Montserrat'}
@@ -261,7 +257,7 @@ function ManageAdDetail({ name }) {
                   w="100%"
                   p={'15px'}
                   bg={'#000D41'}
-                  h="77px"
+               
                   m={'0 !important'}
                   borderRadius={'11px'}
                 >
@@ -292,7 +288,7 @@ function ManageAdDetail({ name }) {
             </Stack>
           </Stack>
         </Box>
-        <Box w="30%" px={2} py={4} margin={'0 !important'}>
+        <Box w={{base:'100%',  sm : '100%', md:'100%', xl:'30%', "2xl": '30%'}} px={2} py={4} margin={'0 !important'}>
           <Stack
             border={'1px solid #000D41'}
             bg={'#000D41 '}

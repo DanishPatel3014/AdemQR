@@ -1,4 +1,4 @@
-import { Button, Stack } from '@chakra-ui/react';
+import { Button, Stack, Grid, GridItem } from '@chakra-ui/react';
 import React from 'react';
 import CustHeading from '../../components/Dashboard/CustHeading/CustHeading';
 import CustTable from '../../components/Dashboard/Table/CustTable';
@@ -93,7 +93,7 @@ function RefferalEarning() {
   ];
 
   return (
-    <Stack px={4} pb={4} overflowY={'auto'} overflowX={'hidden'}>
+    <Stack px={4} pb={4}>
       <Stack
         direction={'row'}
         alignItems={'center'}
@@ -119,14 +119,21 @@ function RefferalEarning() {
           Add Truck
         </Button>
       </Stack>
-      <Stack w="100%" flexDirection={'row'} gap={4}>
-        <Stack w="80%">
+      <Grid
+        h="200px"
+        templateRows="repeat(1, 1fr)"
+        templateColumns="repeat(12, 1fr)"
+        gap={4}
+      >
+        <GridItem colSpan={{base :12, md : 10}}  >
+          {' '}
           <CustTable header={dataHeaders} data={dataColumns} />
-        </Stack>
-        <Stack w="20%">
+        </GridItem>
+        <GridItem rowSpan={2} colSpan={{base : 12 , md : 1}}  >
           <Chart />
-        </Stack>
-      </Stack>
+        </GridItem>
+      </Grid>
+  
     </Stack>
   );
 }

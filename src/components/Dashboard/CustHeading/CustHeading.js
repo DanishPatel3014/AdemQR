@@ -4,7 +4,7 @@ import React from 'react';
 function CustHeading({ name }) {
   return (
     <Heading
-      fontSize={'32px'}
+      fontSize={{base : '20px', md : '32px'}}
       color={'#fff'}
       pb={
         name === 'Refer a Friend' ||

@@ -8,13 +8,13 @@ export default function TruckerDashboardLayout() {
   return (
     <Stack
       w={'100vw'}
-      h={`100vh`}
+      height={['100%', '100%', '100%', '100%', '100vh']}
       bg="#171129"
       backgroundRepeat="no-repeat"
       backgroundPosition="0% 0%"
       backgroundSize="auto"
       opacity={1}
-      direction="row"
+      direction={{base:'column',  sm : 'column', md:'column', xl:'row', "2xl": 'row'}}
       gap={2}
     >
       <Sidebar data={NAV_ITEMS_TRUCKER} />

@@ -41,12 +41,11 @@ export default function Check1({ name }) {
       p={6}
       w="100%"
       h={'100%'}
-      // maxW="600px" // Adjust max width for responsiveness
-      // mx={name ? 0 : 4}
+    
     >
       <VStack spacing={4}>
-        <Stack w="100%" px={4}>
-          <Text fontSize="24px" fontWeight="medium" color="white">
+        <Stack w="100%" >
+          <Text textAlign={'center'} fontSize="20px" fontWeight="medium" color="white">
             {name ? 'Performance Metrics' : 'Ads Status'}
           </Text>
         </Stack>

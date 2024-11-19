@@ -122,14 +122,14 @@ function ReferFriend() {
           </InputGroup>
         </Box>
       </Stack>
-      <Stack py={4} direction={'row'} gap={5}>
+      <Stack py={4} direction={{base : 'column', md: 'column',xl:'row', "2xl": 'row'}} gap={5}>
         <Box
           display={'flex'}
           flexDirection={'column'}
           justifyContent={'center'}
           alignItems={'center'}
           gap={2}
-          w="224px"
+          w={{base : '100%',md: "224px"}}
           h="204px"
           bg="#00092d"
           borderRadius={'20px'}
@@ -147,7 +147,7 @@ function ReferFriend() {
             fontWeight={400}
             fontSize={'16px'}
             color={'#fff'}
-            w="224px"
+            w={{base : '100%',md: "224px"}}
             h="48px"
             _hover={{ bg: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)' }}
           >
@@ -160,7 +160,7 @@ function ReferFriend() {
             fontWeight={400}
             fontSize={'16px'}
             color={'#fff'}
-            w="224px"
+            w={{base : '100%',md: "224px"}}
             h="48px"
             _hover={{ bg: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)' }}
           >
@@ -173,7 +173,7 @@ function ReferFriend() {
             fontWeight={400}
             fontSize={'16px'}
             color={'#fff'}
-            w="224px"
+            w={{base : '100%',md: "224px"}}
             _hover={{ bg: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)' }}
             h="48px"
           >
@@ -181,7 +181,7 @@ function ReferFriend() {
           </Button>
         </Box>
       </Stack>
-      <Stack py={4} width={'80%'}>
+      <Stack py={4} width={{base : '100%', md : '80%'}}>
         <CustTable header={dataHeaders} data={dataColumns} />
       </Stack>
     </Stack>

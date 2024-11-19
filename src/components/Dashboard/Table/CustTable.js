@@ -54,6 +54,7 @@ function CustTable({ header, data }) {
               view All
             </Button>
           </Stack>
+          <TableContainer w={'100%'}>
           <Table variant="simple" colorScheme="whiteAlpha" mt={5}>
             <Thead
               bg="linear-gradient(180deg, #361F6A 0%, #2A1B57 100%)"
@@ -84,6 +85,8 @@ function CustTable({ header, data }) {
               ))}
             </Tbody>
           </Table>
+          </TableContainer>
+         
         </Box>
       </Stack>
       {/* Table */}

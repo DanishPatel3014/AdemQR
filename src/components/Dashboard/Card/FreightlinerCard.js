@@ -4,17 +4,17 @@ import Dummy from '../../../assets/images/truck.png';
 
 function FreightlinerCard() {
   return (
-    <Box p={'15px'} bg={'#00092D'} borderRadius="15px" h="207px">
-      <Stack direction={'row'}>
-        <Stack borderRadius={'15px'} w="283px" h="165px">
+    <Box p={'15px'} bg={'#00092D'} borderRadius="15px" h={{base : '100%', md : "207px"}}>
+      <Stack direction={{base : 'column',md : 'row'}}>
+        <Stack borderRadius={'15px'} w={{base : '100%' , md : "283px"}} h={{base : '100%' ,md : "165px"}}>
           <Image w={'100%'} h={'100%'} borderRadius={'10px'} src={Dummy} />
         </Stack>
         <Stack w="100%">
-          <HStack spacing={4} h={'30px'} w={'100%'}>
+          <HStack spacing={4} h={{base : '100%',md: '30px'}} w={'100%'}>
             <Stack
-              direction={'row'}
+              direction={{base : 'column',md : 'row'}}
               alignItems={'center'}
-              h={'30px'}
+              h={{base : '100%',md: '30px'}}
               w={{ xl: '65%', '2xl': '56%' }}
               px={4}
               gap={6}
@@ -59,7 +59,7 @@ function FreightlinerCard() {
             <Box borderBottom={'1px solid #969DA6'} h={'1px'} w={'97%'}></Box>
           </Stack>
           <Stack
-            flexDirection={'row'}
+            flexDirection={{base : 'column',md : 'row'}}
             w="100%"
             alignItems={'center'}
             gap={8}
@@ -69,13 +69,13 @@ function FreightlinerCard() {
             // justifyContent={'space-between'}
           >
             <Stack
-              w="70%"
+              w={{base : '100%', md : "70%"}}
               p={'15px'}
               bg={'#000D41'}
-              h="77px"
+              h={{base : '100%',md : "77px"}}
               borderRadius={'11px'}
             >
-              <HStack>
+              <Stack direction={'row'}>
                 <Text flex={2} color={'#834CD7'}>
                   Route
                 </Text>
@@ -85,8 +85,8 @@ function FreightlinerCard() {
                 <Text flex={1} color={'#834CD7'}>
                   Driver:
                 </Text>
-              </HStack>
-              <HStack alignItems={'center'}>
+              </Stack>
+              <Stack    direction={'row'} alignItems={'center'}>
                 <Text
                   fontSize={{ xl: '14px', '2xl': '16px' }}
                   flex={2}
@@ -108,9 +108,9 @@ function FreightlinerCard() {
                 >
                   John Doe
                 </Text>
-              </HStack>
+              </Stack>
             </Stack>
-            <Stack w="30%" direction={'row'} m={'0 !important'}>
+            <Stack w={{base : '100%', md : "30%"}} direction={'row'} m={'0 !important'}>
               <Stack
                 w={{ base: '70%', lg: '70%', xl: '70%', '2xl': '43%' }}
                 p={'15px'}

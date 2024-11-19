@@ -24,7 +24,7 @@ function RefferalUserStat() {
           <Image src={User} alt="user" w="100%" h="100%" />
         </Stack>
         <Text
-          fontSize={{ xl: '18px', '2xl': '22px' }}
+          fontSize={{ xl: '16px', '2xl': '18px' }}
           fontWeight={600}
           fontFamily={'Montserrat'}
         >

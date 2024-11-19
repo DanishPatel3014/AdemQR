@@ -32,23 +32,27 @@ function Earning() {
     <Stack px={4} pb={4} overflowY={'auto'} overflowX={'hidden'}>
       <CustHeading name={'My Trucks Earnings'} />
 
-      <Stack w={'100%'} direction={'row'} gap={4}>
-        <Check name="trucker" />
+      <Stack w={'100%'} direction={{base : 'column', md: 'row'}} gap={4}>
+       <Stack  w={{base:'100%',  sm : '100%', md:'40%', xl:'40%', "2xl": '70%'}}>
+       <Check name="trucker" />
+       </Stack>
+        <Stack w={{base:'100%',  sm : '100%', md:'50%', xl:'50%', "2xl": '30%'}}>
         <ChartNew />
+        </Stack>
       </Stack>
       <Stack w="100%" py={4} direction={'row'}>
-        <Stack w="75%">
+        <Stack w={{base:'100%',  sm : '100%', md:'70%', xl:'75%', "2xl": '75%'}}>
           <CustTable header={dataHeaders} data={dataColumns} />
         </Stack>
-        <Stack w="25%">
+        <Stack w={{base:'100%',  sm : '100%', md:'25%', xl:'25%', "2xl": '25%'}}>
           <Check1 />
         </Stack>
       </Stack>
       <Stack w="100%" py={4} direction={'row'}>
-        <Stack w="80%">
+        <Stack w={{base:'100%',  sm : '100%', md:'70%', xl:'75%', "2xl": '75%'}}>
           <CustTable header={dataHeaders} data={dataColumns} />
         </Stack>
-        <Stack w="20%">
+        <Stack w={{base:'100%',  sm : '100%', md:'25%', xl:'25%', "2xl": '25%'}}>
           <Chart />
         </Stack>
       </Stack>

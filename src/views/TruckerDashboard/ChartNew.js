@@ -23,10 +23,10 @@ const ReferralEarnings = () => {
       h={'100%'}
       // pt={4}
     >
-      <Stack w="100%" h={'100%'} direction={'row'} py={3}>
+      <Stack w="100%" h={'100%'} direction={{base : 'column', md: 'row'}} py={3}>
         {/* Semi-Doughnut Chart */}
         <Stack
-          flexDirection={'column'}
+          direction={'column'}
           gap={6}
           w="100%"
           //   border={'1px solid #fff'}
@@ -66,41 +66,33 @@ const ReferralEarnings = () => {
           </Stack>
         </Stack>
         <Stack w="60%">
-          <Flex
-            justifyContent="center"
-            width={'100%'}
-            height={'100vh'}
-            alignItems="center"
-            mt={6}
-            pos="absolute"
-            top={{ lg: -100, '2xl': -240 }}
-            right={-78}
-          >
-            <ResponsiveContainer>
-              <PieChart>
-                <Pie
-                  data={data}
-                  cx="50%"
-                  cy="50%"
-                  borderWidth={0}
-                  startAngle={180}
-                  endAngle={0}
-                  innerRadius="36%"
-                  outerRadius="50%"
-                  fill="#8884d8"
-                  paddingAngle={5}
-                  dataKey="value"
-                >
-                  {data.map((entry, index) => (
-                    <Cell
-                      key={`cell-${index}`}
-                      fill={COLORS[index % COLORS.length]}
-                    />
-                  ))}
-                </Pie>
-              </PieChart>
-            </ResponsiveContainer>
-          </Flex>
+        <Stack w={'400px'} h={'200px'}>
+        <ResponsiveContainer width="100%" height="100%">
+            <PieChart >
+              <Pie
+                data={data}
+                cx="50%"
+                cy="50%"
+                startAngle={180}
+                borderWidth={0}
+                startAngle={180}
+                endAngle={0}
+                innerRadius={60}
+                outerRadius={80}
+                fill="#8884d8"
+                paddingAngle={5}
+                dataKey="value"
+              >
+                {data.map((entry, index) => (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={COLORS[index % COLORS.length]}
+                  />
+                ))}
+              </Pie>
+            </PieChart>
+          </ResponsiveContainer>
+        </Stack>
         </Stack>
         {/* Semi-Doughnut Chart */}
       </Stack>

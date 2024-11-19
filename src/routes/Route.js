@@ -44,7 +44,7 @@ export default function AppRoute() {
       <Route path="/" element={<Weblayout />}>
         <Route index element={<WebHome />} />
         <Route path="/advertisers" element={<Advertisers />} />
-        <Route path="/trucker" element={<Trucker />} />
+        <Route path="/truckers" element={<Trucker />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
@@ -68,7 +68,7 @@ export default function AppRoute() {
       </Route>
       <Route path="/trucker" element={<TruckerDashboardLayout />}>
         {/* Trucker Dashboard */}
-        <Route path="check" element={<Check />} />
+        
         <Route path="dashboard" element={<TruckerDashboard />} />
         <Route path="my-truck" element={<BrowseTruck />} />
         <Route path="truck-details" element={<TruckerDetail />} />
@@ -79,7 +79,7 @@ export default function AppRoute() {
         <Route path="earning" element={<Earning />} />
         <Route path="refer-friend" element={<ReferFriend />} />
         <Route path="referral-earning" element={<RefferalEarning />} />
-        <Route path="checking" element={<ChartNew />} />
+        
         <Route path="notifications" element={<Notifications />} />
         <Route path="support" element={<Support />} />
         {/* Trucker Dashboard */}

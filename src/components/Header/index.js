@@ -299,7 +299,7 @@ const NAV_ITEMS = [
   },
   {
     label: 'Trucker',
-    href: '/trucker',
+    href: '/truckers',
   },
  
   {
