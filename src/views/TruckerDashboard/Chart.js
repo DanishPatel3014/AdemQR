@@ -5,7 +5,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-function TruckAdsRevenue() {
+function TruckAdsRevenue({ name }) {
   // Chart.js data
   const data = {
     labels: ['Truck 1', 'Truck 2', 'Truck 3'],
@@ -41,7 +41,7 @@ function TruckAdsRevenue() {
       color="white"
       textAlign="center"
       width="100%"
-      h="97%"
+      h={name ? '60%' : '97%'}
       display={'flex'}
       flexDirection={'column'}
       justifyContent={'space-between'}
