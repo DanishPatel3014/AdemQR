@@ -6,6 +6,8 @@ import { Trucker_Refferal_NETWORK } from '../../utilities/constant';
 import RefferalStats from '../../components/Dashboard/Stats/RefferalStats';
 
 function ReferralNetwork() {
+  const data = [1, 2, 3, 4];
+
   return (
     <Stack px={4} pb={4} overflowY={'auto'} overflowX={'hidden'}>
       <CustHeading name={'Referral Network'} />
@@ -18,10 +20,9 @@ function ReferralNetwork() {
       </Stack>
       <Stack pb={4}>
         <SimpleGrid columns={[1, 2, 3, 4]} spacing="6">
-          <RefferalStats />
-          <RefferalStats />
-          <RefferalStats />
-          <RefferalStats />
+          {data?.map(item => (
+            <RefferalStats item={item} />
+          ))}
         </SimpleGrid>
       </Stack>
     </Stack>
