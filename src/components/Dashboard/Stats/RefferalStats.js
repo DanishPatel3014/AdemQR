@@ -1,12 +1,12 @@
 import React from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Stack, Text } from '@chakra-ui/react';
 import RefferalUserStat from './RefferalUserStat';
 
-function RefferalStats() {
+function RefferalStats({ item }) {
   return (
     <Box
       bg="#00092D"
-      p="6"
+      p="4"
       borderRadius="20px"
       color="white"
       display="flex"
@@ -15,6 +15,13 @@ function RefferalStats() {
       flexDirection={'column'}
       gap={4}
     >
+      <Stack w="100%" textAlign={'start'} px={3}>
+        <Text fontSize={'22px'} fontWeight={600} color={'#F3EEFE'}>
+          Tier {item}
+        </Text>
+        <Box h="2px" border={'1px solid #30243C'} w="100%"></Box>
+      </Stack>
+
       <RefferalUserStat />
       <RefferalUserStat />
       <RefferalUserStat />

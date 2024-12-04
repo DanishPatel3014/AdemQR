@@ -14,14 +14,14 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  SimpleGrid 
+  SimpleGrid,
 } from '@chakra-ui/react';
 import React from 'react';
 import { NAV_ITEMS } from '../../../utilities/constant';
 import User from '../../../assets/images/avatar.png';
 import logo from '../../../assets/images/logo.png';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { MdMenu } from "react-icons/md";
+import { MdMenu } from 'react-icons/md';
 
 function Sidebar({ data }) {
   const navigate = useNavigate();
@@ -32,36 +32,42 @@ function Sidebar({ data }) {
   return (
     <>
       {/* Side bar */}
-      <Stack pt={5} px={5}  display={{
+      <Stack
+        pt={5}
+        px={5}
+        display={{
           base: 'block',
           sm: 'block',
           md: 'block',
           xl: 'none',
           '2xl': 'none',
-        }}>
-      <SimpleGrid columns={2} spacing={10} alignItems={'center'}>
-      <Stack>
-            <Image  w={'100px'} alt={'Logo'} src={logo} draggable={false} />
-          </Stack>
-     <Stack  alignItems={'end'} >
-     <Button
-       borderRadius="10px"
-      w={'max-content'}
-       bgGradient="linear(180deg, #C086EC 0%, #7F48D6 100%)"
-       color={'#fff'}
-       fontWeight={'400'}
-       _hover={{ bgGradient: 'linear(180deg, #7F48D6 0%, #C086EC 100%)' }}
-       _active={{ bgGradient: 'linear(180deg, #7F48D6 0%, #C086EC 100%)' }}
-        fontSize={'16px'}
-       
-        colorScheme="blue"
-        onClick={onOpen}
+        }}
       >
-      <MdMenu />
-      </Button>
-     </Stack>
-</SimpleGrid>
-      
+        <SimpleGrid columns={2} spacing={10} alignItems={'center'}>
+          <Stack>
+            <Image w={'100px'} alt={'Logo'} src={logo} draggable={false} />
+          </Stack>
+          <Stack alignItems={'end'}>
+            <Button
+              borderRadius="10px"
+              w={'max-content'}
+              bgGradient="linear(180deg, #C086EC 0%, #7F48D6 100%)"
+              color={'#fff'}
+              fontWeight={'400'}
+              _hover={{
+                bgGradient: 'linear(180deg, #7F48D6 0%, #C086EC 100%)',
+              }}
+              _active={{
+                bgGradient: 'linear(180deg, #7F48D6 0%, #C086EC 100%)',
+              }}
+              fontSize={'16px'}
+              colorScheme="blue"
+              onClick={onOpen}
+            >
+              <MdMenu />
+            </Button>
+          </Stack>
+        </SimpleGrid>
       </Stack>
       <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
@@ -109,7 +115,10 @@ function Sidebar({ data }) {
                       <Stack>
                         <Button
                           px={4}
-                          onClick={() => navigate(val.value)}
+                          onClick={() => {
+                            navigate(val.value);
+                            onClose();
+                          }}
                           // onClick={() => handleUrlChange(val.url)}
                           borderRadius="0px 10px 10px 0px"
                           // borderRadius={'21.5px'}
