@@ -1,4 +1,4 @@
-import { SimpleGrid, Stack , Grid, GridItem} from '@chakra-ui/react';
+import { SimpleGrid, Stack, Grid, GridItem } from '@chakra-ui/react';
 import CustHeading from '../../components/Dashboard/CustHeading/CustHeading';
 import { Trucker_STATS } from '../../utilities/constant';
 import Stats from '../../components/Dashboard/Stats/Stats';
@@ -35,12 +35,13 @@ function Earning() {
         templateRows="repeat(1, 1fr)"
         templateColumns="repeat(12, 1fr)"
         gap={4}
+        pb={4}
       >
-        <GridItem colSpan={{base : 12,  sm : 6, md: 6, xl: 6, "2xl": 7}}>
+        <GridItem colSpan={{ base: 12, sm: 6, md: 6, xl: 6, '2xl': 7 }}>
           <Check name="trucker" />
         </GridItem>
 
-        <GridItem colSpan={{base : 12,  sm : 6, md: 6, xl: 6, "2xl": 5}}>
+        <GridItem colSpan={{ base: 12, sm: 6, md: 6, xl: 6, '2xl': 5 }}>
           <ChartNew />
         </GridItem>
       </Grid>
@@ -49,12 +50,12 @@ function Earning() {
         templateColumns="repeat(12, 1fr)"
         gap={4}
       >
-        <GridItem colSpan={{base : 12,  sm : 12, md: 9, xl: 9, "2xl": 9}}>
-        <CustTable header={dataHeaders} data={dataColumns} />
+        <GridItem colSpan={{ base: 12, sm: 12, md: 9, xl: 9, '2xl': 9 }}>
+          <CustTable header={dataHeaders} data={dataColumns} name={'ad'} />
         </GridItem>
 
-        <GridItem colSpan={{base : 12 , sm : 12, md: 3, xl: 3 , "2xl": 3}}>
-        <Check1 />
+        <GridItem colSpan={{ base: 12, sm: 12, md: 3, xl: 3, '2xl': 3 }}>
+          <Check1 />
         </GridItem>
       </Grid>
       <Grid
@@ -62,15 +63,14 @@ function Earning() {
         templateColumns="repeat(12, 1fr)"
         gap={4}
       >
-        <GridItem colSpan={{base : 12,  sm : 12, md: 9, xl: 9, "2xl": 10}}>
-        <CustTable header={dataHeaders} data={dataColumns} />
+        <GridItem colSpan={{ base: 12, sm: 12, md: 9, xl: 9, '2xl': 10 }}>
+          <CustTable header={dataHeaders} data={dataColumns} name={'ad'} />
         </GridItem>
 
-        <GridItem colSpan={{base : 12 , sm : 12, md: 3, xl: 3 , "2xl": 2}}>
-        <Chart />
+        <GridItem colSpan={{ base: 12, sm: 12, md: 3, xl: 3, '2xl': 2 }}>
+          <Chart />
         </GridItem>
       </Grid>
-       
     </Stack>
   );
 }

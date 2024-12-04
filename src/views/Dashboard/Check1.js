@@ -35,17 +35,15 @@ const options = {
 
 export default function Check1({ name }) {
   return (
-    <Box
-      bg="#00092D"
-      borderRadius="20px"
-      p={6}
-      w="100%"
-      h={'100%'}
-    
-    >
+    <Box bg="#00092D" borderRadius="20px" p={6} w="100%" h={'96%'}>
       <VStack spacing={4}>
-        <Stack w="100%" >
-          <Text textAlign={'center'} fontSize="20px" fontWeight="medium" color="white">
+        <Stack w="100%">
+          <Text
+            textAlign={'center'}
+            fontSize="20px"
+            fontWeight="medium"
+            color="white"
+          >
             {name ? 'Performance Metrics' : 'Ads Status'}
           </Text>
         </Stack>

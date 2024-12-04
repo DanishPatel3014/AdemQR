@@ -125,15 +125,16 @@ function RefferalEarning() {
         templateColumns="repeat(12, 1fr)"
         gap={4}
       >
-        <GridItem colSpan={{base : 12,  sm : 12, md: 8, xl: 9, "2xl": 10}}  >
-           
+        <GridItem colSpan={{ base: 12, sm: 12, md: 8, xl: 9, '2xl': 10 }}>
           <CustTable header={dataHeaders} data={dataColumns} />
         </GridItem>
-        <GridItem rowSpan={2} colSpan={{base : 12,  sm : 12, md: 4, xl: 3, "2xl": 2 }}  >
-          <Chart />
+        <GridItem
+          rowSpan={2}
+          colSpan={{ base: 12, sm: 12, md: 4, xl: 3, '2xl': 2 }}
+        >
+          <Chart name="refferal" />
         </GridItem>
       </Grid>
-  
     </Stack>
   );
 }

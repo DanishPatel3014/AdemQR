@@ -98,13 +98,17 @@ const options = {
 };
 export default function Check({ name }) {
   return (
-    <Box w="100%"  display={{base : 'block', md : 'flex'}} gap={6}>
+    <Box
+      w="100%"
+      h={name && '100%'}
+      display={{ base: 'block', md: 'flex' }}
+      gap={6}
+    >
       <Stack
-        w={{base : '100%' , md : '100%'}}
+        w={{ base: '100%', md: '100%' }}
         bg="#00092D"
         p={6}
         borderRadius="20px"
-       
       >
         {' '}
         <Text pb={2} fontSize={'20px'} color={'#fff'} fontWeight={500}>
@@ -114,7 +118,7 @@ export default function Check({ name }) {
           {' '}
           <Line
             w="100%"
-            height={{base : '50%', md : "100%"}}
+            height={{ base: '50%', md: '100%' }}
             data={data}
             options={{
               ...options,
@@ -124,7 +128,7 @@ export default function Check({ name }) {
         </Box>
       </Stack>
       {!name && (
-        <Stack mt={{base : 4 , md : 0}} w={{base : '100%' , md : '30%'}}>
+        <Stack mt={{ base: 4, md: 0 }} w={{ base: '100%', md: '30%' }}>
           <Check1 />
         </Stack>
       )}
