@@ -13,6 +13,7 @@ function RefferalUserStat() {
       borderRadius={'20px'}
       w="100%"
       h="140px"
+      padding={{ base: '15px' }}
     >
       <HStack gap={{ xl: 2, '2xl': 4 }}>
         <Stack

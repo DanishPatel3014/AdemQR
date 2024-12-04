@@ -17,7 +17,7 @@ function ReferralNetwork() {
         </SimpleGrid>
       </Stack>
       <Stack pb={4}>
-        <SimpleGrid columns={[1, 2, 4]} spacing="6">
+        <SimpleGrid columns={[1, 2, 3, 4]} spacing="6">
           <RefferalStats />
           <RefferalStats />
           <RefferalStats />
