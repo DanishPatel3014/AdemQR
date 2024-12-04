@@ -79,7 +79,7 @@ export default function Home() {
           ))}
         </SimpleGrid>
       </Stack>
-      <CustTable header={dataHeaders} data={dataColumns} />
+      <CustTable header={dataHeaders} data={dataColumns} name={'ad'} />
       <Check />
     </Stack>
   );

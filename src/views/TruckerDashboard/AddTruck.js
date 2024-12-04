@@ -38,9 +38,14 @@ function AddTruck() {
       <CustHeading
         name={checkPath === 'add-truck' ? 'Add Truck' : 'Edit Truck'}
       />
-      <Stack direction={{base : 'column', md: 'column',xl:'row', "2xl": 'row'}} gap={4} pb={6} cursor={'pointer'}>
+      <Stack
+        direction={{ base: 'column', md: 'column', xl: 'row', '2xl': 'row' }}
+        gap={4}
+        pb={6}
+        cursor={'pointer'}
+      >
         <Stack
-         w={{base:'100%',  sm : '100%', md:'100%', xl:'40%', "2xl": '40%'}}
+          w={{ base: '100%', sm: '100%', md: '100%', xl: '40%', '2xl': '40%' }}
           h={'145px'}
           border={'2px dashed #C086EC'}
           borderRadius={'10px'}
@@ -88,7 +93,13 @@ function AddTruck() {
                 pos={'absolute'}
                 right={2}
                 top={0}
-                onClick={() => setImageURLs(prevImageURLs => prevImageURLs.slice(0, index).concat(prevImageURLs.slice(index + 1)))}
+                onClick={() =>
+                  setImageURLs(prevImageURLs =>
+                    prevImageURLs
+                      .slice(0, index)
+                      .concat(prevImageURLs.slice(index + 1))
+                  )
+                }
               >
                 <SmallCloseIcon color={'#fff'} />
               </Box>
@@ -100,13 +111,14 @@ function AddTruck() {
         <HStack
           w={'100%'}
           direction={'row'}
-           
           alignItems={'center'}
-          gap={{base:6,  sm : 6, md: 2 , xl:10, "2xl": 10}} 
+          gap={{ base: 6, sm: 6, md: 2, xl: 10, '2xl': 10 }}
           flexWrap={'wrap'}
           //   pr={4}
         >
-          <Box w={{base:'100%',  sm : '100%', md:'30%', xl:'30%', "2xl": '30%'}}>
+          <Box
+            w={{ base: '100%', sm: '100%', md: '30%', xl: '30%', '2xl': '30%' }}
+          >
             <FormLabel
               color={'#7E798B'}
               fontSize={'16px'}
@@ -120,7 +132,10 @@ function AddTruck() {
             </FormLabel>
             <CustInput name={'Type here'} />
           </Box>
-          <Box w={{base:'100%',  sm : '100%', md:'30%', xl:'30%', "2xl": '30%'}}>
+          <Box
+            w={{ base: '100%', sm: '100%', md: '30%', xl: '30%', '2xl': '30%' }}
+            m={'0 !important'}
+          >
             <FormLabel
               color={'#7E798B'}
               fontSize={'16px'}
@@ -134,7 +149,10 @@ function AddTruck() {
             </FormLabel>
             <CustInput name={'1234-4567-8910-1112'} />
           </Box>
-          <Box w={{base:'100%',  sm : '100%', md:'30%', xl:'30%', "2xl": '30%'}}>
+          <Box
+            w={{ base: '100%', sm: '100%', md: '30%', xl: '30%', '2xl': '30%' }}
+            m={'0 !important'}
+          >
             <FormLabel
               color={'#7E798B'}
               fontSize={'16px'}
@@ -154,11 +172,13 @@ function AddTruck() {
           direction={'row'}
           //   justifyContent={'space-between'}
           alignItems={'center'}
-          gap={{base:6,  sm : 6, md: 2 , xl:10, "2xl": 10}} 
+          gap={{ base: 6, sm: 6, md: 2, xl: 10, '2xl': 10 }}
           flexWrap={'wrap'}
           //   pr={4}
         >
-          <Box w={{base:'100%',  sm : '100%', md:'30%', xl:'30%', "2xl": '30%'}}>
+          <Box
+            w={{ base: '100%', sm: '100%', md: '30%', xl: '30%', '2xl': '30%' }}
+          >
             <FormLabel
               color={'#7E798B'}
               fontSize={'16px'}
@@ -172,7 +192,10 @@ function AddTruck() {
             </FormLabel>
             <CustInput name={'Type here'} />
           </Box>
-          <Box w={{base:'100%',  sm : '100%', md:'30%', xl:'30%', "2xl": '30%'}}>
+          <Box
+            w={{ base: '100%', sm: '100%', md: '30%', xl: '30%', '2xl': '30%' }}
+            m={'0 !important'}
+          >
             <FormLabel
               color={'#7E798B'}
               fontSize={'16px'}
@@ -186,7 +209,10 @@ function AddTruck() {
             </FormLabel>
             <CustInput name={'1234-4567-8910-1112'} />
           </Box>
-          <Box w={{base:'100%',  sm : '100%', md:'30%', xl:'30%', "2xl": '30%'}}>
+          <Box
+            w={{ base: '100%', sm: '100%', md: '30%', xl: '30%', '2xl': '30%' }}
+            m={'0 !important'}
+          >
             <FormLabel
               color={'#7E798B'}
               fontSize={'16px'}
@@ -204,13 +230,14 @@ function AddTruck() {
         <HStack
           w={'100%'}
           direction={'row'}
-        
           alignItems={'end'}
-          gap={{base:6,  sm : 6, md: 2 , xl:10, "2xl": 10}} 
+          gap={{ base: 6, sm: 6, md: 2, xl: 10, '2xl': 10 }}
           flexWrap={'wrap'}
           //   pr={4}
         >
-          <Box w={{base:'100%',  sm : '100%', md:'30%', xl:'30%', "2xl": '30%'}}>
+          <Box
+            w={{ base: '100%', sm: '100%', md: '30%', xl: '30%', '2xl': '30%' }}
+          >
             <FormLabel
               color={'#7E798B'}
               fontSize={'16px'}
@@ -226,11 +253,13 @@ function AddTruck() {
           </Box>
 
           <Box
-            w={{base:'100%',  sm : '100%', md:'30%', xl:'30%', "2xl": '30%'}}
+            w={{ base: '100%', sm: '100%', md: '30%', xl: '30%', '2xl': '30%' }}
             h={'89%'}
             display={'flex'}
             alignItems={'end'}
             flexDirection={'row'}
+            // mx={2}
+            m={'0 !important'}
           >
             <Button
               width={'100%'}
@@ -249,7 +278,13 @@ function AddTruck() {
             <Box w={'30%'}></Box>
           ) : (
             <Box
-            w={{base:'100%',  sm : '100%', md:'30%', xl:'30%', "2xl": '30%'}}
+              w={{
+                base: '100%',
+                sm: '100%',
+                md: '30%',
+                xl: '30%',
+                '2xl': '30%',
+              }}
               h={'89%'}
               display={'flex'}
               alignItems={'end'}

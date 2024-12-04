@@ -13,11 +13,11 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-function CustTable({ header, data }) {
+function CustTable({ header, data, name }) {
   return (
     <>
       {/* Table */}
-      <Stack px={2} pb={4}>
+      <Stack px={name ? 0 : 2} pb={4}>
         <Box
           bg="#00092D"
           px="6"
@@ -55,38 +55,37 @@ function CustTable({ header, data }) {
             </Button>
           </Stack>
           <TableContainer w={'100%'}>
-          <Table variant="simple" colorScheme="whiteAlpha" mt={5}>
-            <Thead
-              bg="linear-gradient(180deg, #361F6A 0%, #2A1B57 100%)"
-              borderRadius={'12px !important'}
-            >
-              <Tr textDecoration={'none'}>
-                {header?.map((item, index) => (
-                  <Th
-                    fontSize={'14px'}
-                    fontWeight={500}
-                    color={'#fff'}
-                    key={index}
-                  >
-                    {item}
-                  </Th>
-                ))}
-              </Tr>
-            </Thead>
-            <Tbody>
-              {data?.map((item, index) => (
-                <Tr key={index}>
-                  {Object.keys(item).map((key, index) => (
-                    <Td fontSize={{ xl: '15px', '2xl': '16px' }} key={index}>
-                      {item[key]}
-                    </Td>
+            <Table variant="simple" colorScheme="whiteAlpha" mt={5}>
+              <Thead
+                bg="linear-gradient(180deg, #361F6A 0%, #2A1B57 100%)"
+                borderRadius={'12px !important'}
+              >
+                <Tr textDecoration={'none'}>
+                  {header?.map((item, index) => (
+                    <Th
+                      fontSize={'14px'}
+                      fontWeight={500}
+                      color={'#fff'}
+                      key={index}
+                    >
+                      {item}
+                    </Th>
                   ))}
                 </Tr>
-              ))}
-            </Tbody>
-          </Table>
+              </Thead>
+              <Tbody>
+                {data?.map((item, index) => (
+                  <Tr key={index}>
+                    {Object.keys(item).map((key, index) => (
+                      <Td fontSize={{ xl: '15px', '2xl': '16px' }} key={index}>
+                        {item[key]}
+                      </Td>
+                    ))}
+                  </Tr>
+                ))}
+              </Tbody>
+            </Table>
           </TableContainer>
-         
         </Box>
       </Stack>
       {/* Table */}

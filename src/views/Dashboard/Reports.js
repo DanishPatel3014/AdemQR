@@ -71,7 +71,7 @@ export default function Reports() {
       </Stack>
       <Check />
       <Stack pt={4}>
-        <CustTable header={dataHeaders} data={dataColumns} />
+        <CustTable header={dataHeaders} data={dataColumns} name={'Ad'} />
       </Stack>
     </Stack>
   );

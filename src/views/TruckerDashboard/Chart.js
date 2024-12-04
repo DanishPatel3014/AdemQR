@@ -35,13 +35,16 @@ function TruckAdsRevenue() {
   return (
     <Box
       bg="#00092D"
-      borderRadius="lg"
+      borderRadius="20px"
       p={5}
       boxShadow="lg"
       color="white"
       textAlign="center"
       width="100%"
-      // h="97%"
+      h="97%"
+      display={'flex'}
+      flexDirection={'column'}
+      justifyContent={'space-between'}
     >
       <Text
         fontWeight="500"
