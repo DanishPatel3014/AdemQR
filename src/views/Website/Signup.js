@@ -264,7 +264,7 @@ function Signup() {
                       fontFamily={'Railway'}
                       as={'h1'}
                       color={'#fff'}
-                      fontSize={'64px'}
+                      fontSize={{base: '35px' , md:'64px'}}
                       m={0}
                     >
                       Trucker
@@ -273,7 +273,7 @@ function Signup() {
                       fontFamily={'Railway'}
                       as={'h1'}
                       color={'#fff'}
-                      fontSize={'64px'}
+                      fontSize={{base: '35px' , md:'64px'}}
                       m={0}
                     >
                       Sign-Up

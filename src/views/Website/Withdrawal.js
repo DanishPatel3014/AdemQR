@@ -27,7 +27,7 @@ export default function Withdrawal() {
       <Stack mt={{base : 24, md :36}} py={{base : 16 ,md: 28}}>
       <Stack>
                 
-                <Stack  direction={{base: 'column',md : 'row'}}  alignItems={'start'} gap={{base:4, md:14}}>
+                <Stack  direction={{base: 'column',md : 'row'}}  alignItems={'start'} gap={{base:4, md:32}}>
                   <Heading
                     fontFamily={'Railway'}
                     as={'h1'}
