@@ -37,6 +37,9 @@ import Earning from '../views/TruckerDashboard/Earning';
 import PreviewLink from '../views/Dashboard/PreviewLink';
 import ReferralNetwork from '../views/TruckerDashboard/ReferralNetwork';
 import Signup from '../views/Website/Signup';
+import Registration from '../views/Website/Registration';
+import Withdrawal from '../views/Website/Withdrawal';
+import Otp from '../views/Website/otp';
 export const UserContext = createContext();
 
 export default function AppRoute() {
@@ -49,7 +52,10 @@ export default function AppRoute() {
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/otp" element={<Otp />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/withdrawal" element={<Withdrawal />} />
       </Route>
 
       {/* Dashboard Routes */}
