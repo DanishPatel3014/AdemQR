@@ -28,7 +28,7 @@ function Signup() {
       <Container
         maxW={{ base: '100%', md: '1200px', xl: '1200px', '2xl': '1600px' }}
       >
-        <Stack mt={{base : 24, md :36}} py={{base : 16 ,md: 28}}>
+        <Stack mt={{base : 18, md :20}} py={{base : 16 ,md: 28}}>
           <Tabs variant="unstyled">
             <TabList pb={{base : 6,md: 14}} justifyContent={'center'}>
               <Tab

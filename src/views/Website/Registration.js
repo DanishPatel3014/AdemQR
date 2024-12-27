@@ -27,7 +27,7 @@ export default function Registration() {
       >
        
 
-        <Stack mt={{base : 24, md :36}} py={{base : 16 ,md: 28}}>
+        <Stack mt={{base : 18, md :20}}  py={{base : 16 ,md: 28}}>
           <SimpleGrid columns={{base : 1,md :2}} spacing={10}   >
             <Stack>
               <Stack margin={0} spacing={0} mb={4}>
