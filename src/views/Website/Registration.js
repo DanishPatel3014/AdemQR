@@ -67,7 +67,7 @@ export default function Registration() {
                     </FormLabel>
                     <CustInput name={'Type here'} />
                   </Box>
-                  <Box w={{ base: '100%', md: '47%' }}>
+                  <Box margin={'0 !important'} w={{ base: '100%', md: '47%' }}>
                     <FormLabel
                       color={'#7E798B'}
                       fontSize={'16px'}
