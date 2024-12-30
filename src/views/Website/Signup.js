@@ -28,33 +28,43 @@ function Signup() {
       <Container
         maxW={{ base: '100%', md: '1200px', xl: '1200px', '2xl': '1600px' }}
       >
-        <Stack mt={{base : 18, md :20}} py={{base : 16 ,md: 28}}>
+        <Stack mt={{ base: 18, md: 20 }} py={{ base: 16, md: 28 }}>
           <Tabs variant="unstyled">
-            <TabList pb={{base : 6,md: 14}} justifyContent={'center'}>
+            <TabList pb={{ base: 6, md: 14 }} justifyContent={'center'}>
               <Tab
-               w="151px"
-               h="37px"
-               bg={'#C086EC47'}
-               border={'1px solid #FFFFFF59'}
-               borderRadius={'10px 0px 0px 11px'}
-               opacity={1}
-               color={'#fff'}
-               fontSize={'18px'}
-               fontWeight={'normal'}
-               _selected={{ color: 'white', bgGradient:"linear(to-b, #C086EC 0%, #7F48D6 100%)" }}
-              >Advertiser</Tab>
+                w="151px"
+                h="37px"
+                bg={'#C086EC47'}
+                border={'1px solid #FFFFFF59'}
+                borderRadius={'10px 0px 0px 11px'}
+                opacity={1}
+                color={'#fff'}
+                fontSize={'18px'}
+                fontWeight={'normal'}
+                _selected={{
+                  color: 'white',
+                  bgGradient: 'linear(to-b, #C086EC 0%, #7F48D6 100%)',
+                }}
+              >
+                Advertiser
+              </Tab>
               <Tab
-               w="151px"
-               h="37px"
-               bg={'#C086EC47'}
-               border={'1px solid #FFFFFF59'}
-               borderRadius={'0px 10px 10px 0px'}
-               opacity={1}
-               color={'#fff'}
-               fontSize={'18px'}
-               fontWeight={'normal'}
-               _selected={{ color: 'white', bgGradient:"linear(to-b, #C086EC 0%, #7F48D6 100%)" }}
-              >Trucker</Tab>
+                w="151px"
+                h="37px"
+                bg={'#C086EC47'}
+                border={'1px solid #FFFFFF59'}
+                borderRadius={'0px 10px 10px 0px'}
+                opacity={1}
+                color={'#fff'}
+                fontSize={'18px'}
+                fontWeight={'normal'}
+                _selected={{
+                  color: 'white',
+                  bgGradient: 'linear(to-b, #C086EC 0%, #7F48D6 100%)',
+                }}
+              >
+                Trucker
+              </Tab>
             </TabList>
 
             <TabPanels>
@@ -68,7 +78,7 @@ function Signup() {
                       fontFamily={'Railway'}
                       as={'h1'}
                       color={'#fff'}
-                      fontSize={{base: '35px' , md:'64px'}}
+                      fontSize={{ base: '35px', md: '64px' }}
                       m={0}
                     >
                       Advertiser
@@ -77,7 +87,7 @@ function Signup() {
                       fontFamily={'Railway'}
                       as={'h1'}
                       color={'#fff'}
-                      fontSize={{base: '35px' , md:'64px'}}
+                      fontSize={{ base: '35px', md: '64px' }}
                       m={0}
                     >
                       Sign-Up
@@ -97,7 +107,7 @@ function Signup() {
                       alignItems={'center'}
                       gap={4}
                       flexWrap={'wrap'}
-                      pr={{base : 0 ,md :4}}
+                      pr={{ base: 0, md: 4 }}
                     >
                       <Box w={{ base: '100%', md: '48%' }}>
                         <FormLabel
@@ -111,11 +121,10 @@ function Signup() {
                         >
                           Company Name
                         </FormLabel>
-                        <CustInput name={'Type here'} />
+                        <CustInput name={'Enter Comapny Name'} />
                       </Box>
                       <Box w={{ base: '100%', md: '48%' }} ml={'0 !important'}>
                         <FormLabel
-                        
                           color={'#7E798B'}
                           fontSize={'16px'}
                           fontFamily={'Rubik'}
@@ -126,7 +135,7 @@ function Signup() {
                         >
                           Full Name
                         </FormLabel>
-                        <CustInput name={'1234-4567-8910-1112'} />
+                        <CustInput name={'Enter Your Name'} />
                       </Box>
                     </HStack>
                     <HStack
@@ -142,7 +151,7 @@ function Signup() {
                       alignItems={'center'}
                       gap={4}
                       flexWrap={'wrap'}
-                      pr={{base : 0 ,md :4}}
+                      pr={{ base: 0, md: 4 }}
                     >
                       <Box w={{ base: '100%', md: '48%' }}>
                         <FormLabel
@@ -170,7 +179,7 @@ function Signup() {
                         >
                           Phone Number
                         </FormLabel>
-                        <CustInput name={'Type here'} />
+                        <CustInput name={'Enter Phone Number'} />
                       </Box>
                     </HStack>
                     <HStack
@@ -186,7 +195,7 @@ function Signup() {
                       alignItems={'center'}
                       gap={4}
                       flexWrap={'wrap'}
-                      pr={{base : 0 ,md :4}}
+                      pr={{ base: 0, md: 4 }}
                     >
                       <Box w={{ base: '100%', md: '48%' }}>
                         <FormLabel
@@ -200,7 +209,7 @@ function Signup() {
                         >
                           Password
                         </FormLabel>
-                        <CustInput name={'Enter your Password'} />
+                        <CustInput name={'Enter your Password'} type={'password'} />
                       </Box>
                       <Box w={{ base: '100%', md: '48%' }} ml={'0 !important'}>
                         <FormLabel
@@ -214,7 +223,7 @@ function Signup() {
                         >
                           Confirm Password
                         </FormLabel>
-                        <CustInput name={'Enter your Password'} />
+                        <CustInput name={'Enter your Password'} type={'password'} />
                       </Box>
                     </HStack>
                     <HStack
@@ -234,18 +243,17 @@ function Signup() {
                     >
                       <Box w={{ base: '100%', md: '48%' }}>
                         <Button
-                            w="100%"
-                            bgGradient="linear(180deg, #C086EC 0%, #7F48D6 100%)"
-                            
-                            borderRadius="6px"
-                            py={7}
-                            opacity="1"
-                            color={'#fff'}
-                            fontSize={'18px'}
-                            fontWeight={400}
-                            _hover={{
-                              bg: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)',
-                            }}
+                          w="100%"
+                          bgGradient="linear(180deg, #C086EC 0%, #7F48D6 100%)"
+                          borderRadius="6px"
+                          py={7}
+                          opacity="1"
+                          color={'#fff'}
+                          fontSize={'18px'}
+                          fontWeight={400}
+                          _hover={{
+                            bg: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)',
+                          }}
                         >
                           Sign-up
                         </Button>
@@ -264,7 +272,7 @@ function Signup() {
                       fontFamily={'Railway'}
                       as={'h1'}
                       color={'#fff'}
-                      fontSize={{base: '35px' , md:'64px'}}
+                      fontSize={{ base: '35px', md: '64px' }}
                       m={0}
                     >
                       Trucker
@@ -273,7 +281,7 @@ function Signup() {
                       fontFamily={'Railway'}
                       as={'h1'}
                       color={'#fff'}
-                      fontSize={{base: '35px' , md:'64px'}}
+                      fontSize={{ base: '35px', md: '64px' }}
                       m={0}
                     >
                       Sign-Up
@@ -293,7 +301,7 @@ function Signup() {
                       alignItems={'center'}
                       gap={4}
                       flexWrap={'wrap'}
-                      pr={4}
+                      pr={{ base: 0, md: 4 }}
                     >
                       <Box w={{ base: '100%', md: '48%' }}>
                         <FormLabel
@@ -307,9 +315,9 @@ function Signup() {
                         >
                           Company Name
                         </FormLabel>
-                        <CustInput name={'Type here'} />
+                        <CustInput name={'Enter Comapny Name'} />
                       </Box>
-                      <Box w={{ base: '100%', md: '48%' }}>
+                      <Box w={{ base: '100%', md: '48%' }} ml={'0 !important'}>
                         <FormLabel
                           color={'#7E798B'}
                           fontSize={'16px'}
@@ -321,7 +329,7 @@ function Signup() {
                         >
                           Full Name
                         </FormLabel>
-                        <CustInput name={'1234-4567-8910-1112'} />
+                        <CustInput name={'Enter Your Name'} />
                       </Box>
                     </HStack>
                     <HStack
@@ -337,7 +345,7 @@ function Signup() {
                       alignItems={'center'}
                       gap={4}
                       flexWrap={'wrap'}
-                      pr={4}
+                      pr={{ base: 0, md: 4 }}
                     >
                       <Box w={{ base: '100%', md: '48%' }}>
                         <FormLabel
@@ -353,7 +361,7 @@ function Signup() {
                         </FormLabel>
                         <CustInput name={'Enter your mail'} />
                       </Box>
-                      <Box w={{ base: '100%', md: '48%' }}>
+                      <Box w={{ base: '100%', md: '48%' }} ml={'0 !important'}>
                         <FormLabel
                           color={'#7E798B'}
                           fontSize={'16px'}
@@ -365,7 +373,7 @@ function Signup() {
                         >
                           Phone Number
                         </FormLabel>
-                        <CustInput name={'Type here'} />
+                        <CustInput name={'Enter Phone Number'} />
                       </Box>
                     </HStack>
                     <HStack
@@ -381,7 +389,7 @@ function Signup() {
                       alignItems={'center'}
                       gap={4}
                       flexWrap={'wrap'}
-                      pr={4}
+                      pr={{ base: 0, md: 4 }}
                     >
                       <Box w={{ base: '100%', md: '48%' }}>
                         <FormLabel
@@ -395,9 +403,9 @@ function Signup() {
                         >
                           Password
                         </FormLabel>
-                        <CustInput name={'Enter your Password'} />
+                        <CustInput name={'Enter your Password'} type={'password'} />
                       </Box>
-                      <Box w={{ base: '100%', md: '48%' }}>
+                      <Box w={{ base: '100%', md: '48%' }} ml={'0 !important'}>
                         <FormLabel
                           color={'#7E798B'}
                           fontSize={'16px'}
@@ -409,7 +417,7 @@ function Signup() {
                         >
                           Confirm Password
                         </FormLabel>
-                        <CustInput name={'Enter your Password'} />
+                        <CustInput name={'Enter your Password'} type={'password'} />
                       </Box>
                     </HStack>
                     <HStack
@@ -429,18 +437,17 @@ function Signup() {
                     >
                       <Box w={{ base: '100%', md: '48%' }}>
                         <Button
-                             w="100%"
-                             bgGradient="linear(180deg, #C086EC 0%, #7F48D6 100%)"
-                             
-                             borderRadius="6px"
-                             py={7}
-                             opacity="1"
-                             color={'#fff'}
-                             fontSize={'18px'}
-                             fontWeight={400}
-                             _hover={{
-                               bg: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)',
-                             }}
+                          w="100%"
+                          bgGradient="linear(180deg, #C086EC 0%, #7F48D6 100%)"
+                          borderRadius="6px"
+                          py={7}
+                          opacity="1"
+                          color={'#fff'}
+                          fontSize={'18px'}
+                          fontWeight={400}
+                          _hover={{
+                            bg: 'linear-gradient(180deg, #C086EC 0%, #7F48D6 100%)',
+                          }}
                         >
                           Sign-up
                         </Button>
@@ -451,7 +458,6 @@ function Signup() {
               </TabPanel>
             </TabPanels>
           </Tabs>
-        
         </Stack>
       </Container>
     </Stack>
