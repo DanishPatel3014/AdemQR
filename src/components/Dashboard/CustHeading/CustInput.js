@@ -1,11 +1,18 @@
 import { Box, Input } from '@chakra-ui/react';
 import React from 'react';
 
-function CustInput({ name }) {
+function CustInput({ name, type }) {
   return (
-    <Box w="100%" bg="#00092D" borderRadius="10px" p="3px">
+    <Box
+      w="100%"
+      bg="#00092D"
+      borderRadius="10px"
+      p="3px"
+      margin={'0 !important'}
+    >
       <Input
         placeholder={name}
+        type={type || 'text'}
         variant="unstyled"
         borderRadius="12px"
         px="16px"
